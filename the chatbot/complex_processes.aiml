@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!--
+This file contains most of the conversation for this chatbot. It handles all
+variables it must know, to be able to give the most relevant results from the
+NS API, which is handled in the lab4.py
+
+Lab 4 - Speech, Language and Dialogue Processing
+Sabijn Perdijk, Ellen Bogaards, Femke Witteveen & Roos Vervelde
+19 maart 2020
+ -->
+
+    <!--The two possible reactions below always follow to the only binary
+    question, which is to check wether the bot is saying the correct things
+    he got from the conversation. -->
+
+    <category>
+        <pattern>YES</pattern>
+        <template>
+        <condition name = "origin">
+            <li value="">Where do you want to go?</li>
+            <li><condition name = "destination">
+                <li value="">Where are you leaving from?</li>
+                <li><condition name = "leaving_time">
+                    <li value=""><condition name = "arriving_time">
+                        <li value="">Great, when do you want to go? (hh:mm or now)</li>
+                        <li>Great, your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="leaving_time"></get>.</li>
+                    </condition></li>
+                    <li>Great, your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="leaving_time"></get>.</li>
+                </condition></li>
+            </condition></li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <template>
+        Sorry to hear that, could you please correct me?
+        </template>
+    </category>
+
+    <!--The sentences below explain where the speaker wants to go, and where
+    he wants to leave from. -->
+
+    <category>
+        <pattern>I WANT TO GO TO *</pattern>
+        <template>
+        <think><set name="destination"><star/></set></think>
+        <condition name = "origin">            
+            <li value="">Allright. From where are you leaving?</li>
+            <li><condition name = "leaving_time">
+                <li value=""><condition name = "arriving_time">
+                    <li value="">Allright, When do you want to go? (hh:mm or now)</li>
+                    <li>Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="arriving_time"></get>. Correct?</li>
+                </condition></li>
+                <li>Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="leaving_time"></get>. Correct?</li>
+            </condition></li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I AM LEAVING FROM *</pattern>
+        <template>
+        <think><set name="origin"><star/></set></think>
+        <condition name = "destination">
+            <li value="">Allright. Where are you going?</li>
+            <li><condition name = "leaving_time">
+                <li value=""><condition name = "arriving_time">
+                    <li value="">Allright, when do you want to go? (hh:mm or now)</li>
+                    <li>Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="arriving_time"></get>. Correct?</li>
+                    </condition></li>
+                <li>Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="leaving_time"></get>. Correct?</li>
+            </condition></li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO GO FROM * TO *</pattern>
+        <template>
+            <think><set name="destination"><star index="2"/></set>
+                   <set name="origin"><star index="1"/></set>
+            </think> 
+            <condition name = "leaving_time">
+                <li value=""><condition name = "arriving_time">
+                    <li value="">Allright, when do you want to go? (hh:mm or now)</li>
+                    <li>Your destination is <get name="destination"></get>, arriving from <get name="origin"></get> at <get name="arriving_time"></get>. Correct?</li>
+                    </condition></li>
+                <li>Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="leaving_time"></get>. Correct?</li>
+            </condition>
+        </template>
+    </category>
+
+    <!--The sentences below explain something about at which time the speaker
+    wants to arrive or leave, and also from where and where to (in some
+    sentences). -->
+
+    <category>
+        <pattern>I WANT TO GO FROM * TO * AT *</pattern>
+        <template>
+            <think><set name="destination"><star index="2"/></set>
+                   <set name="origin"><star index="1"/></set>
+                   <set name="arriving_time"></set>
+                   <set name="leaving_time"><star index="3"/></set>
+            </think> 
+            Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="leaving_time"></get>. Correct?
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO GO AT *</pattern>
+        <template>
+        <think><set name="leaving_time"><star/></set></think>
+        <think><set name="arriving_time"></set></think>
+        <condition name = "origin">            
+            <li value="">Allright. Where are you leaving from?</li>
+            <li><condition name = "destination">
+                <li value="">You haven't told me your destination yet.</li>
+                <li>Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="leaving_time"></get>. Correct?</li>
+            </condition></li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO ARRIVE AT *</pattern>
+        <template>
+        <think><set name="arriving_time"><star/></set></think>
+        <think><set name="leaving_time"></set></think>
+        <condition name = "origin">
+            <li value="">Allright. Where are you leaving from?</li>
+            <li><condition name = "destination">
+                <li value="">You haven't told me your destination yet.</li>
+                <li>Your destination is <get name="destination"></get>, arriving from <get name="origin"></get> at <get name="arriving_time"></get>. Correct?</li>
+            </condition></li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO ARRIVE AT * AT *</pattern>
+        <template>
+        <think><set name="destination"><star index="1"/></set></think>
+        <think><set name="leaving_time"></set></think>
+        <think><set name="arriving_time"><star index="2"/></set></think>
+        <condition name = "origin">
+            <li value="">Allright. Where are you leaving from?</li>
+            <li>Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="arriving_time"></get>. Correct?</li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO GO TO * AT *</pattern>
+        <template>
+        <think><set name="destination"><star index="1"/></set></think>
+        <think><set name="arriving_time"></set></think>
+        <think><set name="leaving_time"><star index="2"/></set></think>
+        <condition name = "origin">
+            <li value="">Allright. Where are you leaving from?</li>
+            <li>Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="leaving_time"></get>. Correct?</li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO GO NOW</pattern>
+        <template>
+        <think><set name="leaving_time"><date format="%I" locale="en_US"/></set></think>
+        <condition name = "origin">
+            <li value="">You haven't told me your location yet.</li>
+            <li><condition name = "destination">
+                <li value="">You haven't told me your destination yet.</li>
+                <li>Your destination is <get name="destination"></get>, leaving from <get name="origin"></get> at <get name="leaving_time"></get>. Correct?</li>
+            </condition></li>
+        </condition>
+        </template>
+    </category>
+
+    <!--Asking the way back-->
+
+    <category>
+        <pattern>COULD YOU TELL ME THE WAY BACK</pattern>
+        <template>
+        <condition name = "origin">
+            <li value="">Where are you going now?</li>
+            <li><condition name = "destination">
+                <li value="">Where are you leaving from now?</li>
+                <li>Allright, when do you want to go back?</li>
+            </condition></li>
+        </condition>
+        <think><set name="leaving_time"><star/></set>
+               <set name="temporary"><get name="origin"></get></set>
+               <set name="origin"><get name="destination"></get></set>
+               <set name="destination"><get name="temporary"></get></set></think>
+        </template>
+    </category>
+
+    <!--F's around a word means focus on that word -->
+
+    <category>
+        <pattern>I F WANTED F TO GO TO *</pattern>
+        <template>
+        But now you don’t want to go there anymore, I see. Do you want to go somewhere else?
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WAS PLANNING TO LEAVE AT *</pattern>
+        <template>
+        <srai>I WANT TO GO AT <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I F WAS F PLANNING TO LEAVE AT *</pattern>
+        <template>
+        But now you think you can’t make it anymore, I see. So do you want to leave at a different
+        time?
+        </template>
+    </category>
+
+    <!--For example for when someone says: “i want to go to amsterdam ... please”.
+    Without the pause, the location would be set to “Amsterdam Please” -->
+
+    <category>
+        <pattern>I WANT TO GO TO * PAUSE *</pattern>
+        <template>
+        <srai>I WANT TO GO TO <star index="1"/></srai>
+        </template>
+    </category>
+
+    <!--The questions below expect a different response from the chatbot than
+    the clear question that is checked using "Correct?" -->
+
+    <category>
+        <pattern>WHAT IS THE LAST TRAIN TO *</pattern>
+        <template>
+        <think><set name="destination"><star/></set></think>
+        <condition name = "origin">
+            <li value="">What is your location?</li>
+            <li>The last train to <get name="destination"></get>, leaving from <get name="origin"></get> is:</li>
+         </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE LAST TRAIN</pattern>
+        <template>
+        <condition name = "origin">
+            <li value="">You haven't told me your location yet.</li>
+            <li><condition name = "destination">
+                <li value="">You haven't told me your destination yet.</li>
+                <li>The last train to <get name="destination"></get>, leaving from <get name="origin"></get> is:</li>
+            </condition></li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE FIRST TRAIN TO *</pattern>
+        <template>
+        <think><set name="destination"><star/></set></think>
+        <condition name = "origin">
+            <li value="">What is your location?</li>
+            <li>The first train to <get name="destination"></get>, leaving from <get name="origin"></get> is:</li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE FIRST TRAIN</pattern>
+        <template>
+        <condition name = "origin">
+            <li value="">You haven't told me your location yet.</li>
+            <li><condition name = "destination">
+                <li value="">You haven't told me your destination yet.</li>
+                <li>The first train to <get name="destination"></get>, leaving from <get name="origin"></get> is:</li>
+            </condition></li>
+        </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT TRAINS ARE LEAVING AT *</pattern>
+        <template>
+            Leaving trains from <set name="origin"><star/></set> the coming hour are:
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT TRAINS ARE ARRIVING AT *</pattern>
+        <template>
+            Arriving trains at <set name="origin"><star/></set> the coming hour are:
+        </template>
+    </category>
+
+    <!--Questions for clearing things up: -->
+
+    <category>
+        <pattern>WHERE AM I</pattern>
+        <template>
+         <condition name = "origin">
+            <li value="">You haven't told me your location yet.</li>
+            <li>You told me you are in <get name="origin"></get>.</li>
+         </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHERE AM I GOING</pattern>
+        <template>
+         <condition name = "destination">
+            <li value="">You haven't told me your destination yet.</li>
+            <li>You told me you wanted to go to <get name="destination"></get>.</li>
+         </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE TIME</pattern>
+        <template>The local time is: <date format="%I" locale="en_US"/>
+        </template>
+    </category>
+
+    <!--When you want to go home... -->
+
+    <category>
+        <pattern>I WANT TO GO HOME</pattern>
+        <template>
+            Where is your home?
+        </template>
+    </category>
+
+    <category>
+        <pattern>IN *</pattern>
+        <template>
+            <srai>I WANT TO GO TO <star/></srai>
+        </template>
+    </category>
+
+    <!--The text below will be spoken if the bot doesn't understand what has been said,
+    for example, when the speaker doesn't talk in full sentences. -->
+
+   <category>
+      <pattern>*</pattern>
+      <template>
+        Sorry, I don't understand you. Please speak in a full sentence, or rephrase!
+      </template>
+   </category>
+
+    <!--These are different ways of saying things similar to sentences above,
+    and are directed to those using <srai> -->
+
+    <category>
+      <pattern>MY DESTINATION IS * LEAVING FROM * AT *</pattern>
+      <template>
+         <srai>I WANT TO GO FROM <star index="2"/> TO <star index="1"/> AT <star index="3"/></srai>
+      </template>
+   </category>
+
+    <category>
+        <pattern>AND THE WAY BACK</pattern>
+        <template>
+        <srai>COULD YOU TELL ME THE WAY BACK <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I ALSO WANT TO GO BACK</pattern>
+        <template>
+        <srai>COULD YOU TELL ME THE WAY BACK <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANTED TO GO TO *</pattern>
+        <template>
+        <srai>I WANT TO GO TO <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>MY LOCATION IS *</pattern>
+        <template>
+            <srai>I AM LEAVING FROM <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO LEAVE FROM *</pattern>
+        <template>
+            <srai>I AM LEAVING FROM <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LEAVING FROM *</pattern>
+        <template>
+            <srai>I AM LEAVING FROM <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I AM IN *</pattern>
+        <template>
+            <srai>I AM LEAVING FROM <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO LEAVE AT *</pattern>
+        <template>
+            <srai>I WANT TO GO AT <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WANT TO LEAVE FOR * AT *</pattern>
+        <template>
+            <srai>I WANT TO GO TO <star/> AT <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I AM AT *</pattern>
+        <template>
+            <srai>I AM LEAVING FROM <star/></srai>
+        </template>
+    </category>
+
+    <category>
+      <pattern>MY DESTINATION IS *</pattern>
+      <template>
+         <srai>I WANT TO GO TO <star/></srai>
+      </template>
+   </category>
+
+    <category>
+      <pattern>I AM GOING TO *</pattern>
+      <template>
+         <srai>I WANT TO GO TO <star/></srai>
+      </template>
+   </category>
+
+    <category>
+      <pattern>NOW</pattern>
+      <template>
+         <srai>I WANT TO GO NOW</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern>I WANT TO LEAVE NOW</pattern>
+      <template>
+         <srai>I WANT TO GO NOW</srai>
+      </template>
+    </category>
+   
+   <category>
+      <pattern>I AM AT *</pattern>
+      <template>
+         <srai>I AM LEAVING FROM <star/></srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>I WANT TO GO TO * FROM *</pattern>
+      <template>
+         <srai>I WANT TO GO FROM <star index="2"/> TO <star index="1"/></srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>FROM *</pattern>
+      <template>
+         <srai>MY LOCATION IS <star/></srai>
+      </template>
+   </category>
+    
+   <category>
+      <pattern>TO *</pattern>
+      <template>
+         <srai>I WANT TO GO TO <star/></srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>AT *</pattern>
+      <template>
+         <srai>I WANT TO GO AT <star/></srai>
+      </template>
+   </category>
+</aiml>
