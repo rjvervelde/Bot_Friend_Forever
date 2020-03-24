@@ -17,7 +17,6 @@ def load_positive_words():
 def load_negative_words():
     return load_words("neg_words.txt")
 
-
 def clean_up(word):
     if word.isalpha():
         return word.lower()
