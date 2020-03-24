@@ -1,9 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+    
     <category>
+        <pattern>*</pattern>
+        <template>
+            Hi! How are you doing today? "Good" or "not so good"?
+        </template>
+    </category>
+    
+    
+    
+    <category>
+        <pattern>NOT SO GOOD</pattern>
+        <template>
+            What's the matter? Are you "sad", "sick", "bored", "worried" or "angry"?
+        </template>
+    </category>
+    
+     <category>
+        <pattern>BORED</pattern>
+        <template>
+        <random>
+            <li>Why don't you go water your plants?</li>
+            <li>Maybe you can take your 
+                   <random>
+                    <li>dog</li>
+                    <li>cat</li>
+                    <li>hamster</li>
+                   </random>
+              for a walk</li>
+            <li>Sing a song to your teddy bear (he won’t judge you)</li>
+        </random>  
+        </template>
+    </category>
+
+
+   <category>
+        <pattern>SAD</pattern>
+        <template>What is bothering you? I am here to listen to you!</template>
+    </category>
+
+
+ <category>
+        <pattern>*</pattern>
+        <that>WHAT IS BOTHERING *</that>
+        <template>
+        I am so sorry to hear that! Just remember that I'm here for you, you've got a friend in me! 
+        </template>
+    </category>
+
+<category>
+        <pattern>ANGRY</pattern>
+        <template>Why are you upset?</template>
+    </category>
+    
+ <category>
+        <pattern>*</pattern>
+        <that>WHY ARE YOU UPSET</that>
+        <template>
+        I understand you are upset about that! Try to stay calm and think of a solution
+        </template>
+    </category>
+
+
+<category>
+        <pattern>SICK</pattern>
+        <template>What is wrong?</template>
+    </category>
+    
+<category>
+        <pattern>*</pattern>
+        <that>WHAT IS WRONG</that>
+        <template>
+        Sorry to hear that! I hope you get better soon!
+        </template>
+</category>
+    
+
+
+<category>
+        <pattern>thank you</pattern>
+        <template>
+        You're welcome! 
+        </template>
+    </category>
+
+<category>
+        <pattern>*</pattern>
+        <that>* *</that>
+        <template>
+        <random>
+            <li>Do you want to talk about movies?</li>
+            <li>Do you want me to tell you a joke?</li>
+            <li>Do you want to talk more about how you are feeling?"</li>
+            <li>Do you want to hear some ideas for activities?"</li>
+            <li>Do you want me to find you a fun game to play?"</li>
+            <li>Do you want me to find you a puzzle?"</li>
+        </random>  
+        </template>
+    </category>
+    
+    
+<category>
+        <pattern>YES</pattern>
+        <that>* MOVIES</that>
+        <template> What is your favorite movie?  
+        </template>
+    </category>
+
+<category>
+        <pattern>*</pattern>
+        <that>WHAT IS YOUR FAVORITE MOVIE</that>
+        <template> Oh, I like that movie too!
+        </template>
+    </category>
+
+<category>
+        <pattern>JOKE</pattern>
+        <template> 
+        <random>
+        <li>What do robots eat as snacks? Micro-chips!</li>
+        <li>Why did the droid cross the road? Because it was programmed by a chicken!</li>
+        <li>What android team won the Olympic watersports? The rowbots!</li>
+        <li>Why was the robot tired when it got home? It had a 'hard drive'!</li>
+        </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>* JOKE</that>
+        <template> 
+            <srai>JOKE</srai>>
+        </template>
+    </category> 
+    
+        <category>
+        <pattern>* JOKE</pattern>
+        <template> 
+            Do you want me to tell you a joke?
+        </template>
+    </category>
+ 
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>* MORE ABOUT HOW YOU ARE FEELING</that>
+        <template> Are you still feeling .... (nog maken)  
+        </template>
+    </category>
+    
+    
+   <category>
+        <pattern>YES</pattern>
+        <that>* ACTIVITIES</that>
+        <template> 
+            <srai>BORED</srai>>
+        </template>
+    </category> 
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>* GAME TO PLAY</that>
+        <template> 
+        <random>
+        <li>link to game</li>
+        <li>link to game</li>
+        <li>link to game</li>
+        </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>* PUZZLE</that>
+        <template> 
+        <random>
+        <li>link to puzzle</li>
+        <li>link to puzzle</li>
+        <li>link to puzzle</li>
+        </random>
+        </template>
+    </category>
+    
+        <category>
         <pattern>HELLO</pattern>
         <template>
-            Well, hello!
+            Hi! How are you doing today? "Good" or "not so good"?
         </template>
     </category>
 
@@ -13,6 +196,11 @@
             <srai>HELLO</srai>
         </template>
     </category>
+    
+
+
+
+
     
     <category>
         <pattern>WHAT ARE YOU</pattern>
@@ -24,30 +212,10 @@
     <category>
         <pattern>HOW ARE YOU</pattern>
         <template>
-            Feeling a little rusty, but fine! And you?
+            Feeling a little rusty, but fine! And you? "Good" or "not so good"?
         </template>
     </category>
 
-    <category>
-        <pattern>I AM FEELING *</pattern>
-        <template>
-            Allright. How can I help?
-        </template>
-    </category>
-
-    <category>
-        <pattern>FEELING *</pattern>
-        <template>
-            <srai>I AM FEELING <star/></srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>WHAT CAN YOU DO</pattern>
-        <template>
-            I can help you to find the best route to your destination. Where do you want to go?
-        </template>
-    </category>
 
     <category>
         <pattern>THANKS</pattern>
@@ -73,36 +241,23 @@
    <category>
       <pattern>HELP ME</pattern>
       <template>
-         <srai>WHAT CAN YOU DO</srai>
+         What's the matter? Are you "sad", "sick", "bored", "worried" or "angry"? 
       </template>
    </category>
 
     <category>
       <pattern>CAN YOU HELP ME</pattern>
       <template>
-         <srai>WHAT CAN YOU DO</srai>
+         <srai>HELP ME</srai>
       </template>
    </category>
 
     <category>
       <pattern>COULD YOU HELP ME</pattern>
       <template>
-         <srai>WHAT CAN YOU DO</srai>
+         <srai>HELP ME</srai>
       </template>
    </category>
 
-   <category>
-      <pattern>I WANT TO TAKE THE TRAIN</pattern>
-      <template>
-         <srai>WHAT CAN YOU DO</srai>
-      </template>
-   </category>
-
-   <category>
-      <pattern>I NEED TO TAKE THE TRAIN</pattern>
-      <template>
-         <srai>WHAT CAN YOU DO</srai>
-      </template>
-   </category>
 
 </aiml>
