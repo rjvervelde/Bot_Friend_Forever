@@ -18,9 +18,12 @@
     <category>
         <pattern>MUSIC</pattern>
         <template>
-            I love music too. What is your favorite genre?
+            I love music too. What is your favorite genre from Jazz, Classical, Pop or Rock?
         </template>
     </category>
+
+
+<!---> JAZZ <--->
 
     <category>
         <pattern>JAZZ</pattern>
@@ -32,13 +35,216 @@
     <category>
         <pattern>ELLA FITZGERALD</pattern>
         <template>
-            It's always summertime with Ella :) Have you listened to this 
+            It's always summertime with Ella :) Have you listened to this https://bit.ly/3dry3vW
         </template>
     </category>
 
     <category>
         <pattern>FRANK SINATRA</pattern>
         <template>
-            It's always summertime with Ella :) Have you listened to this 
+            Ofcourse, the one and only! Have you listened to this https://bit.ly/2vO7pfL
+        </template>
+    </category>
+
+<!---> CLASSICAL MUSIC <--->
+
+    <category>
+        <pattern>CLASSICAL MUSIC</pattern>
+        <template>
+            Classical music always gives me the chills. Who is your favorite composer??
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <template>
+            Hmm I don't know that one. I should listen to it!
+        </template>
+    </category>
+
+    <category>
+        <pattern>BACH</pattern>
+        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <template>
+            The matthäus passion is very close to my heart. What is your favorite part? https://bit.ly/2QMf4Cu
+        </template>
+    </category>
+
+    <category>
+        <pattern>MOZART</pattern>
+        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <template>
+            Who doesn't love Mozart... Do you know this song? https://bit.ly/2WJmTwO
+        </template>
+    </category>
+
+    <category>
+        <pattern>BEETHOVEN</pattern>
+        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <template>
+            Beethoven always gives me the chills... Do you know this epic piece: https://bit.ly/33KCu0j
+        </template>
+    </category>
+
+    <category>
+        <pattern>CHOPIN</pattern>
+        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <template>
+            Chopin is so moving... You must know this song: https://bit.ly/2WIsUtm
+        </template>
+    </category>
+
+    <category>
+        <pattern>EINAUDI</pattern>
+        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <template>
+            Oeh, a real modern man! Who doesn't love amélie.. Have you listened to this: https://bit.ly/2QJRYfU
+        </template>
+    </category>
+
+<!---> POP <--->
+
+    <category>
+        <pattern>POP</pattern>
+        <template>
+            YES! Pop is great to listen to, and a real reflexion of society sometimes. What is your favorite era?
+        </template>
+    </category>
+
+    <category>
+        <pattern>THE 50S</pattern>
+        <template>
+            I love the 50s! While the world was reinventing itself, so was music. Do you know this song? https://bit.ly/2Jgnzl6
+        </template>
+    </category>
+
+    <category>
+        <pattern>THE 60S</pattern>
+        <template>
+            The era of Rock and Roll ánd the Beatles, what more do you want? You should listen to this: https://bit.ly/2QGGvO8
+        </template>
+    </category>
+
+    <category>
+        <pattern>THE 70S</pattern>
+        <template>
+            The time of hippies and freedom... Listen to this: https://bit.ly/3dnRQfT
+        </template>
+    </category>
+
+    <category>
+        <pattern>THE 80S</pattern>
+        <template>
+            The time of Queen, and the king of pop! https://bit.ly/33LaXMe
+        </template>
+    </category>
+
+    <category>
+        <pattern>THE 90S</pattern>
+        <template>
+            Yeah man, all about the Backstreet Boys and hiphop! Check this out: https://bit.ly/39fS2KU
+        </template>
+    </category>
+
+    <category>
+        <pattern>THE 00S</pattern>
+        <template>
+            It doesn't even seem that long ago! This song is so sentimental for me: https://bit.ly/2vNrBOS
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>THE 10S</pattern>
+        <template>
+            The era has only just ended! Whenever I need some new strength, I listen to this song: https://bit.ly/2WOQa9r
+        </template>
+    </category>
+
+<!---> ROCK <--->
+
+    <category>
+        <pattern>ROCK</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>Rock gives me so many feelings in my robot heart... What is your favorite band?</that>
+        <template>
+            Hmm I don't know that one. I should listen to it!
+        </template>
+    </category>
+
+    <category>
+        <pattern>PINK FLOYD</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
+        </template>
+    </category>
+
+    <category>
+        <pattern>NIRVANA</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>THE FOO FIGHTERS</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>GUNS N ROSES</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>PINK FLOYD</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
+        </template>
+    </category>
+
+    
+    <category>
+        <pattern>THE ROLLING STONES</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>LED ZEPPELIN</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
+        </template>
+    </category>
+
+    
+    <category>
+        <pattern>THE DOORS</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
+        </template>
+    </category>
+
+    
+    <category>
+        <pattern>AC/DC</pattern>
+        <template>
+            Rock gives me so many feelings in my robot heart... What is your favorite band?
         </template>
     </category>
