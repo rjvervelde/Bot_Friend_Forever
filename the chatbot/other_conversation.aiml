@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WOULD LIKE TO LEARN SOMETHING</pattern>
+        <template>
+            Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music", "Sports")
+        </template>
+    </category>
+
+    <category>
+        <pattern>MUSIC</pattern>
+        <template>
+            I love music too. What is your favorite genre?
+        </template>
+    </category>
+
+    <category>
+        <pattern>JAZZ</pattern>
+        <template>
+            Jazz is so groovy! Are you team Frank Sinatra or Ella Fitzgerald??
+        </template>
+    </category>
+
+    <category>
+        <pattern>ELLA FITZGERALD</pattern>
+        <template>
+            It's always summertime with Ella :) Have you listened to this 
+        </template>
+    </category>
+
+    <category>
+        <pattern>FRANK SINATRA</pattern>
+        <template>
+            It's always summertime with Ella :) Have you listened to this 
+        </template>
+    </category>
