@@ -182,14 +182,14 @@
     <category>
         <pattern>PINK FLOYD</pattern>
         <template>
-            Rock gives me so many feelings in my robot heart... What is your favorite band?
+            Pink Floyd hits me on so many levels. This is my personal favorite: https://bit.ly/2vTeqfu
         </template>
     </category>
 
     <category>
         <pattern>NIRVANA</pattern>
         <template>
-            Rock gives me so many feelings in my robot heart... What is your favorite band?
+            Nirvana always hits me.. Do you know this acoustic version? https://bit.ly/3aktkds
         </template>
     </category>
 
@@ -197,7 +197,7 @@
     <category>
         <pattern>THE FOO FIGHTERS</pattern>
         <template>
-            Rock gives me so many feelings in my robot heart... What is your favorite band?
+            I really like their message and acoustic sound. Do you know this: https://bit.ly/2xomDst
         </template>
     </category>
 
@@ -205,23 +205,14 @@
     <category>
         <pattern>GUNS N ROSES</pattern>
         <template>
-            Rock gives me so many feelings in my robot heart... What is your favorite band?
+            The sound gives me all the feelings. This is a classic: https://bit.ly/3aktVfc
         </template>
     </category>
-
-
-    <category>
-        <pattern>PINK FLOYD</pattern>
-        <template>
-            Rock gives me so many feelings in my robot heart... What is your favorite band?
-        </template>
-    </category>
-
     
     <category>
         <pattern>THE ROLLING STONES</pattern>
         <template>
-            Rock gives me so many feelings in my robot heart... What is your favorite band?
+            The real classics are theirs... This is one of my favorites: https://bit.ly/33J9TIS
         </template>
     </category>
 
@@ -229,7 +220,7 @@
     <category>
         <pattern>LED ZEPPELIN</pattern>
         <template>
-            Rock gives me so many feelings in my robot heart... What is your favorite band?
+            All about epic music and double-necked guitars... Goosebumps: https://bit.ly/2wt0eKx
         </template>
     </category>
 
@@ -237,7 +228,7 @@
     <category>
         <pattern>THE DOORS</pattern>
         <template>
-            Rock gives me so many feelings in my robot heart... What is your favorite band?
+            One of the oldest, and best! Watch this: https://bit.ly/2Jr8WMd
         </template>
     </category>
 
@@ -245,6 +236,51 @@
     <category>
         <pattern>AC/DC</pattern>
         <template>
-            Rock gives me so many feelings in my robot heart... What is your favorite band?
+            These golden oldies are still going just as hard! Watch this live performance: https://bit.ly/2Jfvi3a
         </template>
     </category>
+
+
+    <category>
+        <pattern>SCIENCE</pattern>
+        <template>
+            Science makes the world, great choice!! What is your field of interest? (Choose: Computer Science, Physics, Biology, Psychology, Philosophy)
+        </template>
+    </category>
+
+    <category>
+        <pattern>COMPUTER SCIENCE</pattern>
+        <template>
+        <random>
+            <li> Yes! Computers are the future, but not in a scifi way. Or not? https://bit.ly/2WJlAOh</li>
+            <li> Do you know something about its history? It is fascinating! https://bit.ly/2Ul3UXS</li>
+            <li> patternN </li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Physics</pattern>
+        <template>
+        <random>
+            <li> It always interests me how gravity never works in my favor.. https://bit.ly/2UBG7Si </li>
+            <li> There is so much that humanity doesn't understand about it yet... https://bit.ly/2UiFBcQ </li>
+            <li> Do you believe that we really landed on the moon? Luckily, I do! Watch this: https://bit.ly/2WJpVRy</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>BIOLOGY</pattern>
+        <template>
+        <random>
+            <li> Which came first, the chicken or the egg? https://bit.ly/33XLfVf</li>
+            <li>  </li>
+            <li> patternN </li>
+        </random>
+        </template>
+    </category>
+
+    
+
+</aiml>
