@@ -20,6 +20,7 @@
      <category>
         <pattern>BORED</pattern>
         <template>
+        <think><set name="feeling">bored</set></think>
         <random>
             <li>Why don't you go water your plants?</li>
             <li>Maybe you can take your 
@@ -33,11 +34,14 @@
         </random>  
         </template>
     </category>
+# nog meer activities toevoegen
 
 
    <category>
         <pattern>SAD</pattern>
-        <template>What is bothering you? I am here to listen to you!</template>
+        <template>
+        <think><set name="feeling">sad</set></think>
+        What is bothering you? I am here to listen to you!</template>
     </category>
 
 
@@ -51,21 +55,24 @@
 
 <category>
         <pattern>ANGRY</pattern>
-        <template>Why are you upset?</template>
+        <template>
+        <think><set name="feeling">angry</set></think>
+        Why are you upset?</template>
     </category>
     
  <category>
         <pattern>*</pattern>
         <that>WHY ARE YOU UPSET</that>
         <template>
-        I understand you are upset about that! Try to stay calm and think of a solution
+        I understand you are upset about that! Try to stay calm and think of a solution.
         </template>
     </category>
 
 
 <category>
         <pattern>SICK</pattern>
-        <template>What is wrong?</template>
+        <template><think><set name="feeling">sick</set></think>
+        What is wrong?</template>
     </category>
     
 <category>
@@ -76,6 +83,23 @@
         </template>
 </category>
     
+    
+    <category>
+        <pattern>WORRIED</pattern>
+        <template><think><set name="feeling">worried</set></think>
+        What are you worried about?</template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT ARE YOU WORRIED ABOUT</that>
+        <template>
+        I understand you are worried about that. See if you can do something about it, 
+        and if you can't, try to find something to distract your mind from it.
+        </template>
+</category>
+
+
 
 
 <category>
@@ -85,20 +109,7 @@
         </template>
     </category>
 
-<category>
-        <pattern>*</pattern>
-        <that>* *</that>
-        <template>
-        <random>
-            <li>Do you want to talk about movies?</li>
-            <li>Do you want me to tell you a joke?</li>
-            <li>Do you want to talk more about how you are feeling?"</li>
-            <li>Do you want to hear some ideas for activities?"</li>
-            <li>Do you want me to find you a fun game to play?"</li>
-            <li>Do you want me to find you a puzzle?"</li>
-        </random>  
-        </template>
-    </category>
+
     
     
 <category>
@@ -146,7 +157,21 @@
     <category>
         <pattern>YES</pattern>
         <that>* MORE ABOUT HOW YOU ARE FEELING</that>
-        <template> Are you still feeling .... (nog maken)  
+        <template> Are you still feeling <get name="feeling"></get>? 
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>ARE YOU STILL FEELING *</that>
+        <template>
+        <condition name="feeling">
+        <li value="sad">quote voor sad nog maken</li>
+        <li value="angry">quote voor angry nog maken</li>
+        <li value="worried">quote voor worried nog maken</li>
+        <li value="sick">quote voor sick nog maken</li>
+        <li value="bored">Then lets do something! <srai>SUGGESTIONS</srai></li>
+        </condition>
         </template>
     </category>
     
@@ -163,13 +188,21 @@
         <pattern>YES</pattern>
         <that>* GAME TO PLAY</that>
         <template> 
+        <srai>GAME</srai>
+        </template>
+    </category>
+ 
+    <category>
+        <pattern>GAME</pattern>
+        <template> 
         <random>
-        <li>link to game</li>
-        <li>link to game</li>
-        <li>link to game</li>
+        <li>https://www.elkspel.nl/behendigheid/bubble-shooter</li>
+        <li>https://www.elkspel.nl/g/kill-the-coronavirus</li>
+        <li><srai>THOUGHT GAME</srai></li>
         </random>
         </template>
     </category>
+    
     
     <category>
         <pattern>YES</pattern>
@@ -196,10 +229,209 @@
             <srai>HELLO</srai>
         </template>
     </category>
+   
+   
+#thought game:
+
+<category>
+        <pattern>THOUGHT GAME</pattern>
+        <template>
+           Lets play a game. I have someting in my mind, you try to guess it. You want to play that game?
+        </template>
+    </category>
+
+<category>
+        <pattern>YES</pattern>
+        <that>LETS PLAY A GAME *</that>
+        <template>
+        <think>
+        <random>
+        <li><set name="thoughtgame">grapefruit</set></li>
+        <li><set name="thoughtgame">cherry</set></li>
+        <li><set name="thoughtgame">pear</set></li>
+        </random>
+        </think>
+          Category: fruit. 8 guesses left. Type "stop" if you want to stop playing. Make your first guess
+        </template>
+    </category>
+
+ <category>
+        <pattern>CHECK FOR ANSWER *</pattern>
+        <template>
+<think><set name="guess"><star/></set></think>
+        <condition name="thoughtgame">
+<li value="grapefruit">
+                <condition name="guess">
+                <li value="grapefruit">Correct! I was thinking about <get name="thoughtgame"></get>
+                <think><set name="WrongOrRight">right</set></think></li>
+                <li><think><set name="WrongOrRight">wrong</set></think></li>
+                </condition>
+</li>
+<li value="cherry">
+                <condition name="guess">
+                <li value="cherry">Correct! I was thinking about <get name="thoughtgame"></get>
+                <think><set name="WrongOrRight">right</set></think></li>
+                <li><think><set name="WrongOrRight">wrong</set></think></li>
+                </condition>
+</li>
+<li value="pear">
+                <condition name="guess">
+                <li value="mango">Correct! I was thinking about <get name="thoughtgame"></get>
+                <think><set name="WrongOrRight">right</set></think></li>
+                <li><think><set name="WrongOrRight">wrong</set></think></li>
+                </condition>
+</li>
+<li value="">Sorry, something went wrong</li>
+</condition>
+        </template>
+    </category>
+
+<category>
+        <pattern>*</pattern>
+     <that>* * YOUR FIRST GUESS</that>
+        <template>
+          <srai>CHECK FOR ANSWER <star/></srai>
+          <condition name="WrongOrRight">
+                <li value="wrong">It is not <star/>. Make your second guess</li>
+                </condition>
+        </template>
+    </category>
+    
+<category>
+        <pattern>*</pattern>
+     <that>* * MAKE YOUR SECOND GUESS</that>
+        <template>
+        <srai>CHECK FOR ANSWER <star/></srai>
+          <condition name="WrongOrRight">
+                <li value="wrong">
+                    It's not <star/>. <srai>THOUGHTGAME HINT 1</srai> You can make your third guess.</li>
+                </condition>
+        </template>
+    </category>
+    
+<category>
+        <pattern>*</pattern>
+     <that>* * MAKE YOUR THIRD GUESS</that>
+        <template>
+        <srai>CHECK FOR ANSWER <star/></srai>
+          <condition name="WrongOrRight">
+                <li value="wrong">
+                    It's not <star/>. You can make your forth guess.</li>
+                </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+     <that>* * MAKE YOUR FORTH GUESS</that>
+        <template>
+        <srai>CHECK FOR ANSWER <star/></srai>
+          <condition name="WrongOrRight">
+                <li value="wrong">
+                 It's not <star/>. <srai>THOUGHTGAME HINT 2</srai> You can make your fifth guess.</li>
+                </condition>
+        </template>
+    </category>
+
+   <category>
+        <pattern>*</pattern>
+     <that>* * MAKE YOUR FIFTH GUESS</that>
+        <template>
+        <srai>CHECK FOR ANSWER <star/></srai>
+          <condition name="WrongOrRight">
+                <li value="wrong">
+                 It's not <star/>. <srai>THOUGHTGAME HINT 3</srai> You can make your sixth guess.</li>
+                </condition>
+        </template>
+    </category>
+
+
+<category>
+        <pattern>*</pattern>
+     <that>* * MAKE YOUR SIXTH GUESS</that>
+        <template>
+        <srai>CHECK FOR ANSWER <star/></srai>
+          <condition name="WrongOrRight">
+                <li value="wrong">
+                It's not <star/>. <srai>THOUGHTGAME HINT 4</srai> You can make your last guess.</li>
+                </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+     <that>* * MAKE YOUR LAST GUESS</that>
+        <template>
+         <srai>CHECK FOR ANSWER <star/></srai>
+          <condition name="WrongOrRight">
+                <li value="wrong">
+                Ahhh, you did not guess it in time. I was thinking about <get name="thoughtgame"></get>.</li>
+                </condition>
+        </template>
+    </category>
     
 
+#thoughtgame hints    
+    <category>
+        <pattern>THOUGHTGAME HINT 1</pattern>
+        <template>
+<condition name="thoughtgame">
+                <li value="grapefruit">Hint: It's round.</li>
+                <li value="cherry">hint voor cherry</li>
+                <li value="pear">hint voor pear</li>
+                </condition>
+        </template>
+    </category>
+    
+      <category>
+        <pattern>THOUGHTGAME HINT 2</pattern>
+        <template>
+        <condition name="thoughtgame">
+                <li value="grapefruit">Hint: It's yellow or orange on the outside.</li>
+                <li value="cherry">hint2 voor cherry</li>
+                <li value="pear">hint2 voor pear</li>
+                </condition>
+        </template>
+    </category>
+    
+      <category>
+        <pattern>THOUGHTGAME HINT 3</pattern>
+        <template>
+        <condition name="thoughtgame">
+                <li value="grapefruit">Hint: It's red or yellow on the inside.</li>
+                <li value="cherry">hint3 voor cherry</li>
+                <li value="pear">hint3 voor pear</li>
+        </condition>
+        </template>
+    </category>
+    
+      <category>
+        <pattern>THOUGHTGAME HINT 4</pattern>
+        <template>
+        <condition name="thoughtgame">
+                <li value="grapefruit">Hint: It's a citrus fruit.</li>
+                <li value="cherry">hint4 voor cherry</li>
+                <li value="pear">hint4 voor pear</li>
+                </condition>
+        </template>
+    </category>
+    
+<category>
+        <pattern>STOP</pattern>
+        <template>
+        You stopped the game. The answer was <get name="thoughtgame"></get>
+        </template>
+    </category>    
 
 
+
+
+<category>
+        <pattern>OK</pattern>
+        <template>
+            <srai>YES</srai>
+        </template>
+    </category>
 
     
     <category>
@@ -232,13 +464,6 @@
    </category>
 
    <category>
-      <pattern>HOW CAN YOU HELP ME</pattern>
-      <template>
-         <srai>WHAT CAN YOU DO</srai>
-      </template>
-   </category>
-
-   <category>
       <pattern>HELP ME</pattern>
       <template>
          What's the matter? Are you "sad", "sick", "bored", "worried" or "angry"? 
@@ -246,18 +471,35 @@
    </category>
 
     <category>
-      <pattern>CAN YOU HELP ME</pattern>
+      <pattern>* HELP ME</pattern>
       <template>
          <srai>HELP ME</srai>
       </template>
    </category>
 
-    <category>
-      <pattern>COULD YOU HELP ME</pattern>
-      <template>
-         <srai>HELP ME</srai>
-      </template>
-   </category>
+
+<category>
+        <pattern>RANDOM SUGGESTIONS</pattern>
+        <template>
+        <random>
+            <li>Do you want to talk about movies?</li>
+            <li>Do you want me to tell you a joke?</li>
+            <li>Do you want to talk more about how you are feeling?</li>
+            <li>Do you want to hear some ideas for activities?</li>
+            <li>Do you want me to find you a fun game to play?</li>
+            <li>Do you want me to find you a puzzle?</li>
+        </random>  
+        </template>
+    </category>
+
+<category>
+        <pattern>*</pattern>
+        <that>* * </that>
+        <template>
+       <srai>RANDOM SUGGESTIONS</srai> 
+        </template>
+    </category>
+        
 
 
 </aiml>
