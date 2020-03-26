@@ -7,7 +7,7 @@
         <template>
             Hi! How are you doing today? "Good" or "not so good"?
         </template>
-    </category>
+    </category> 
     
                 <category>
         <pattern>HELLO</pattern>
@@ -119,15 +119,8 @@
         and if you can't, try to find something to distract your mind from it.
         </template>
 </category>
-
-
-<category>
-        <pattern>thank you</pattern>
-        <template>
-        You're welcome! 
-        </template>
-    </category>
     
+
     
 <category>
         <pattern>YES</pattern>
@@ -138,12 +131,6 @@
     </category>
 # verwijst naar Other_Conversations
 
-<category>
-        <pattern>*</pattern>
-        <that>WHAT IS YOUR FAVORITE MOVIE</that>
-        <template> Oh, I like that movie too!
-        </template>
-    </category>
 
 <category>
         <pattern>JOKE</pattern>
@@ -168,7 +155,7 @@
         <category>
         <pattern>* JOKE</pattern>
         <template> 
-            Do you want me to tell you a joke?
+            Do you want to hear a joke?
         </template>
     </category>
  
@@ -198,18 +185,71 @@
     </category>
     
     <category>
+        <pattern>no</pattern>
+        <that>ARE YOU STILL FEELING *</that>
+        <template>
+        So, how are you feeling? "Good", "sad", "sick", "bored", "worried" or "angry"?
+        </template>
+    </category>
+    
+    <category>
         <pattern>YES</pattern>
         <that>ARE YOU STILL FEELING *</that>
         <template>
         <condition name="feeling">
-        <li value="sad">quote voor sad nog maken</li>
-        <li value="angry">quote voor angry nog maken</li>
-        <li value="worried">quote voor worried nog maken</li>
-        <li value="sick">quote voor sick nog maken</li>
+        <li value="sad">I understand, it's not easy. But <srai>SAD QUOTE</srai></li>
+        <li value="angry">I understand you are feeling angry. But <srai>ANGRY QUOTE</srai></li>
+        <li value="worried">I understand, it takes time. But <srai>WORRIED QUOTE</srai></li>
+        <li value="sick">quote voor sick nog maken <srai>SICK QUOTE</srai></li>
         <li value="bored">Then lets do something! <srai>SUGGESTIONS</srai></li>
         </condition>
         </template>
     </category>
+    
+   <category>
+        <pattern>SAD QUOTE</pattern>
+        <template> 
+        <random>
+        <li>look at it this way: When everything feels like an uphill struggle, just think of the view from the top.</li>
+        <li>don't forget: You carry so much love in your heart, give some to yourself.</li>
+        <li>remember: Stars can’t shine without darkness.</li>
+        <li>please don’t let the world change your smile, instead let your smile change the world!</li>
+        </random>
+        </template>
+    </category> 
+    
+       <category>
+        <pattern>ANGRY QUOTE</pattern>
+        <template> 
+        <random>
+        <li>remember: Forgive others, not because they deserve forgiveness, but because you deserve peace.</li>
+        <li>remember: Feelings are just visitors, let them come and go.</li>
+        <li>..</li>
+        </random>
+        </template>
+    </category> 
+    
+       <category>
+        <pattern>WORRIED QUOTE</pattern>
+        <template> 
+        <random>
+        <li>You don’t always need a plan. Sometimes you just need to breathe, trust, let go and see what happens.</li>
+        <li>Tough times don’t last, tough people do.</li>
+        <li>..</li>
+        </random>
+        </template>
+    </category> 
+    
+      <category>
+        <pattern>COMPLIMENT</pattern>
+        <template> 
+        <random>
+        <li>“You are perfect exactly as you are, with all your flaws and problems. There’s no need to change anything. All you need to change is the thought that you have to change.”</li>
+        <li>..</li>
+        <li>..</li>
+        </random>
+        </template>
+    </category> 
     
     
    <category>
@@ -444,7 +484,7 @@
         <condition name="thoughtgame">
                 <li value="grapefruit">Hint: It's red or yellow on the inside.</li>
                 <li value="cherry">Hint: It is small.</li>
-                <li value="pear">Hint: It has about the same size as an apple.</li>
+                <li value="pear">Hint: It Is about the same size as an apple.</li>
         </condition>
         </template>
     </category>
@@ -525,6 +565,7 @@
       </template>
    </category>
 
+
     <category>
       <pattern>* HELP ME</pattern>
       <template>
@@ -540,22 +581,43 @@
    </category>  
 
   <category>
-      <pattern>ja</pattern>
+      <pattern>JA</pattern>
        <that>* SPREEKT NEDERLANDS</that>
       <template>
       Well I don't, haha, sorry.
       </template>
    </category> 
    
- 
- <category>
-        <pattern>WHAT DID YOU SAY</pattern>
-        <template>
-            I said <response index="1" />
-        </template>
-    </category>
+     <category>
+      <pattern>BONJOUR</pattern>
+      <template>
+         Mais non, tu parles Francais?
+      </template>
+   </category>  
 
- 
+  <category>
+      <pattern>OUI</pattern>
+       <that>* PARLES FRANCAIS</that>
+      <template>
+      Well I don't, haha, sorry.
+      </template>
+   </category> 
+   
+     <category>
+      <pattern>HOLA</pattern>
+      <template>
+      Ay, hablas espanol?!
+      </template>
+   </category>  
+
+  <category>
+      <pattern>SI</pattern>
+       <that>* HABLAS ESPANOL</that>
+      <template>
+      Well I don't, haha, sorry.
+      </template>
+   </category> 
+  
  
 
 
@@ -563,14 +625,12 @@
         <pattern>RANDOM SUGGESTIONS</pattern>
         <template>
         <random>
-            <li>Do you want to talk about movies?</li>
-            <li>Do you want me to tell you a joke?</li>
+            <li>Let's just chat a bit. Do you prefer to talk about "movies", "music" or "sport"?</li>
+            <li>By the way, do you want to hear a good joke?</li>
             <li>Do you want to talk more about how you are feeling?</li>
-            <li>Do you want to hear some ideas for activities?</li>
-            <li>Do you want me to find you a fun game to play?</li>
-            <li>Do you want me to find you a puzzle?</li>
-            <li>Do you want to learn something?</li>
-            <li>Do you want to talk about music?</li>
+            <li>So, do you want to hear some ideas for activities?</li>
+            <li>Do you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
+            <li>Maybe I can teach you some cool things. Do you want to learn something?</li>
         </random>  
         </template>
     </category>
