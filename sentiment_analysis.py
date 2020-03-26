@@ -13,37 +13,32 @@ def load_words(filename):
     return lines
 
 def load_positive_words():
-    """ 
-    Downloaded from https://www.kaggle.com/rtatman/sentiment-lexicons-for-81-languages 
-    """
-    return load_words("positive_words_nl.txt")
+    return load_words("pos_words.txt")
 
 def load_negative_words():
-    """ 
-    Downloaded from https://www.kaggle.com/rtatman/sentiment-lexicons-for-81-languages 
-    """
-    return load_words("negative_words_nl.txt")
+    return load_words("neg_words.txt")
 
 def clean_up(word):
     lemmatizer = WordNetLemmatizer() 
 
     if not word.isalpha():
+        print("hello")
         word = word.strip(".,!?:;")
         word = word.strip()
     
     word = word.lower()
     word = lemmatizer.lemmatize(word)
     
-    return word
+    return word.strip()
 
 def sentiment_of_word(word):
     pos_words = load_positive_words()
     neg_words = load_negative_words()
 
-    if word in pos_words:
+    if word in pos_words and word.isalpha():
         return 1
 
-    if word in neg_words:
+    if word in neg_words and word.isalpha():
         return -1
 
     return 0
@@ -57,10 +52,11 @@ def sentiment_of_text(text):
 
 # hier komt de het antwoord van de user
 text = """
-    precies
+    prints
     """
 
-# print(sentiment_of_text(text))
+print(sentiment_of_text(text))
+
 
 
 
