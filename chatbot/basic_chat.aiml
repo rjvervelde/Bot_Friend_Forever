@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     
+   
     <category>
         <pattern>*</pattern>
         <template>
@@ -8,7 +9,27 @@
         </template>
     </category>
     
+                <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Hi! How are you doing today? "Good" or "not so good"?
+        </template>
+    </category>
+
+    <category>
+        <pattern>HI</pattern>
+        <template>
+            <srai>HELLO</srai>
+        </template>
+    </category>
     
+    <category>
+        <pattern>GOOD</pattern>
+        <template>
+        Great to hear that! 
+        <srai>RANDOM SUGGESTIONS</srai>
+        </template>
+    </category>
     
     <category>
         <pattern>NOT SO GOOD</pattern>
@@ -100,24 +121,22 @@
 </category>
 
 
-
-
 <category>
         <pattern>thank you</pattern>
         <template>
         You're welcome! 
         </template>
     </category>
-
-
     
     
 <category>
         <pattern>YES</pattern>
         <that>* MOVIES</that>
-        <template> What is your favorite movie?  
+        <template>
+        !komt nog! <srai>MOVIES</srai>  
         </template>
     </category>
+# verwijst naar Other_Conversations
 
 <category>
         <pattern>*</pattern>
@@ -153,11 +172,28 @@
         </template>
     </category>
  
+   <category>
+        <pattern>HAHA</pattern>
+        <template> 
+        Glad you liked that! <srai>RANDOM SUGGESTIONS</srai>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>HAHAHA</pattern>
+        <template> 
+        <srai>HAHA</srai>
+        </template>
+    </category>
     
     <category>
         <pattern>YES</pattern>
         <that>* MORE ABOUT HOW YOU ARE FEELING</that>
-        <template> Are you still feeling <get name="feeling"></get>? 
+        <template>
+        <condition name="feeling">
+        <li value="">So, how are you feeling? "Good" or "not so good"?</li>
+        <li>Are you still feeling <get name="feeling"></get>?</li>
+        </condition>
         </template>
     </category>
     
@@ -216,19 +252,27 @@
         </template>
     </category>
     
-        <category>
-        <pattern>HELLO</pattern>
-        <template>
-            Hi! How are you doing today? "Good" or "not so good"?
-        </template>
-    </category>
-
+    
     <category>
-        <pattern>HI</pattern>
+        <pattern>YES</pattern>
+        <that>* LEARN SOMETHING</that>
         <template>
-            <srai>HELLO</srai>
+      !komt nog! <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
         </template>
     </category>
+# verwijst naar Other_Conversations
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>* ABOUT MUSIC</that>
+        <template>
+      !komt nog! <srai>MUSIC</srai> 
+        </template>
+    </category>
+# verwijst naar Other_Conversations
+    
+    
+
    
    
 #thought game:
@@ -377,8 +421,8 @@
         <template>
 <condition name="thoughtgame">
                 <li value="grapefruit">Hint: It's round.</li>
-                <li value="cherry">hint voor cherry</li>
-                <li value="pear">hint voor pear</li>
+                <li value="cherry">Hint: It's round.</li>
+                <li value="pear">Hint: it's green.</li>
                 </condition>
         </template>
     </category>
@@ -388,8 +432,8 @@
         <template>
         <condition name="thoughtgame">
                 <li value="grapefruit">Hint: It's yellow or orange on the outside.</li>
-                <li value="cherry">hint2 voor cherry</li>
-                <li value="pear">hint2 voor pear</li>
+                <li value="cherry">Hint: It has one pit.</li>
+                <li value="pear">Hint: It is not round.</li>
                 </condition>
         </template>
     </category>
@@ -399,8 +443,8 @@
         <template>
         <condition name="thoughtgame">
                 <li value="grapefruit">Hint: It's red or yellow on the inside.</li>
-                <li value="cherry">hint3 voor cherry</li>
-                <li value="pear">hint3 voor pear</li>
+                <li value="cherry">Hint: It is small.</li>
+                <li value="pear">Hint: It has about the same size as an apple.</li>
         </condition>
         </template>
     </category>
@@ -410,8 +454,8 @@
         <template>
         <condition name="thoughtgame">
                 <li value="grapefruit">Hint: It's a citrus fruit.</li>
-                <li value="cherry">hint4 voor cherry</li>
-                <li value="pear">hint4 voor pear</li>
+                <li value="cherry">Hint: It starts with a C.</li>
+                <li value="pear">Hint: It starts with a P.</li>
                 </condition>
         </template>
     </category>
@@ -419,11 +463,9 @@
 <category>
         <pattern>STOP</pattern>
         <template>
-        You stopped the game. The answer was <get name="thoughtgame"></get>
+        You stopped the game. The answer was <get name="thoughtgame"></get>.
         </template>
     </category>    
-
-
 
 
 <category>
@@ -433,6 +475,19 @@
         </template>
     </category>
 
+<category>
+        <pattern>YEAH</pattern>
+        <template>
+            <srai>YES</srai>
+        </template>
+    </category>
+     
+<category>
+        <pattern>PLEASE</pattern>
+        <template>
+            <srai>YES</srai>
+        </template>
+    </category>
     
     <category>
         <pattern>WHAT ARE YOU</pattern>
@@ -476,6 +531,32 @@
          <srai>HELP ME</srai>
       </template>
    </category>
+   
+  <category>
+      <pattern>HOI</pattern>
+      <template>
+         Oh, je spreekt Nederlands?
+      </template>
+   </category>  
+
+  <category>
+      <pattern>ja</pattern>
+       <that>* SPREEKT NEDERLANDS</that>
+      <template>
+      Well I don't, haha, sorry.
+      </template>
+   </category> 
+   
+ 
+ <category>
+        <pattern>WHAT DID YOU SAY</pattern>
+        <template>
+            I said <response index="1" />
+        </template>
+    </category>
+
+ 
+ 
 
 
 <category>
@@ -488,9 +569,12 @@
             <li>Do you want to hear some ideas for activities?</li>
             <li>Do you want me to find you a fun game to play?</li>
             <li>Do you want me to find you a puzzle?</li>
+            <li>Do you want to learn something?</li>
+            <li>Do you want to talk about music?</li>
         </random>  
         </template>
     </category>
+
 
 <category>
         <pattern>*</pattern>
