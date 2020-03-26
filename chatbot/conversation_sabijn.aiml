@@ -4,10 +4,17 @@
     <category>
         <pattern>*</pattern>
         <template>
-            Hi! How are you doing today? "Good" or "not so good"?
+            Hi! How is your day so far?
         </template>
     </category>
     
+    <category>
+        <pattern>MY DAY</pattern>
+        <template>
+            This works so far
+        </template>
+    </category>
+
     <category>
         <pattern>NOT SO GOOD</pattern>
         <template>
@@ -96,9 +103,6 @@
         and if you can't, try to find something to distract your mind from it.
         </template>
 </category>
-
-
-
 
 <category>
         <pattern>thank you</pattern>
@@ -214,13 +218,6 @@
         </template>
     </category>
     
-        <category>
-        <pattern>HELLO</pattern>
-        <template>
-            Hi! How are you doing today? "Good" or "not so good"?
-        </template>
-    </category>
-
     <category>
         <pattern>HI</pattern>
         <template>
