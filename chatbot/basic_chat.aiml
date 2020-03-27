@@ -42,16 +42,16 @@
         <pattern>BORED</pattern>
         <template>
         <think><set name="feeling">bored</set></think>
+        Hm, let's think of somthing to do then!
         <random>
             <li>Why don't you go water your plants?</li>
             <li>Maybe you can take your 
-                   <random>
-                    <li>dog</li>
-                    <li>cat</li>
-                    <li>hamster</li>
-                   </random>
-              for a walk</li>
+                <random><li>dog</li><li>cat</li><li>hamster</li></random>
+                for a walk</li>
             <li>Sing a song to your teddy bear (he won’t judge you)</li>
+            <li>Maybe I can teach you some cool things. Do you want to learn something?</li>
+            <li>Do you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
+            <li>Let's just chat a bit. Do you prefer to talk about "movies", "music" or "sport"?</li>
         </random>  
         </template>
     </category>
@@ -120,6 +120,44 @@
         </template>
 </category>
     
+
+
+    <category>
+        <pattern>* SAD</pattern>
+        <template>
+       <condition name="feeling">
+        <li value="sad"></li>
+        <li><srai>SAD</srai></li>
+        </condition>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>* ANGRY</pattern>
+        <template>
+       <condition name="feeling">
+        <li value="angry"></li>
+        <li><srai>ANGRY</srai></li>
+        </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* WORRIED</pattern>
+        <template>
+       <condition name="feeling">
+        <li value="worried"></li>
+        <li><srai>WORRIED</srai></li>
+        </condition>
+        </template>
+    </category>
+
+ <category>
+        <pattern>* BORED</pattern>
+        <template>
+        <srai>BORED</srai>
+        </template>
+    </category>
 
     
 <category>
@@ -201,10 +239,11 @@
         <li value="angry">I understand you are feeling angry. But <srai>ANGRY QUOTE</srai></li>
         <li value="worried">I understand, it takes time. But <srai>WORRIED QUOTE</srai></li>
         <li value="sick">quote voor sick nog maken <srai>SICK QUOTE</srai></li>
-        <li value="bored">Then lets do something! <srai>SUGGESTIONS</srai></li>
+        <li value="bored"><srai>BORED</srai></li>
         </condition>
         </template>
-    </category>
+    </category>   
+    
     
    <category>
         <pattern>SAD QUOTE</pattern>
@@ -244,9 +283,10 @@
         <pattern>COMPLIMENT</pattern>
         <template> 
         <random>
-        <li>“You are perfect exactly as you are, with all your flaws and problems. There’s no need to change anything. All you need to change is the thought that you have to change.”</li>
-        <li>..</li>
-        <li>..</li>
+        <li>it makes me very happy to talk to you today!</li>
+        <li>it is great to have a friend like you!</li>
+        <li>I hope someone told you today how amazing you are. If not: You are amazing! :D</li>
+        <li></li>
         </random>
         </template>
     </category> 
@@ -335,7 +375,7 @@
         <li><set name="thoughtgame">pear</set></li>
         </random>
         </think>
-          Category: fruit. 8 guesses left. Type "stop" if you want to stop playing. Make your first guess
+          Category: fruit. 8 guesses left. Type "stop game" if you want to stop playing. Make your first guess
         </template>
     </category>
 
@@ -501,7 +541,7 @@
     </category>
     
 <category>
-        <pattern>STOP</pattern>
+        <pattern>STOP GAME</pattern>
         <template>
         You stopped the game. The answer was <get name="thoughtgame"></get>.
         </template>
@@ -517,6 +557,13 @@
 
 <category>
         <pattern>YEAH</pattern>
+        <template>
+            <srai>YES</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YES *</pattern>
         <template>
             <srai>YES</srai>
         </template>
@@ -557,6 +604,15 @@
          <srai>THANKS</srai>
       </template>
    </category>
+   
+   <category>
+        <pattern>YOU ARE RIGHT</pattern>
+        <template>
+         I know, robots are always right. :p
+        </template>
+    </category>
+    
+    
 
    <category>
       <pattern>HELP ME</pattern>
@@ -630,7 +686,8 @@
             <li>Do you want to talk more about how you are feeling?</li>
             <li>So, do you want to hear some ideas for activities?</li>
             <li>Do you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
-            <li>Maybe I can teach you some cool things. Do you want to learn something?</li>
+            <li>Now, maybe I can teach you some cool things. Do you want to learn something?</li>
+            <li>So... I just wanted to tell you, <srai>compliment</srai></li>
         </random>  
         </template>
     </category>
