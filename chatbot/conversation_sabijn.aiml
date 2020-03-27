@@ -9,7 +9,7 @@
     </category>
     
     <category>
-        <pattern>MY DAY</pattern>
+        <pattern>MY DAY *</pattern>
         <template>
             This works so far
         </template>
