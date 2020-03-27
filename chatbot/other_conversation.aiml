@@ -15,15 +15,36 @@
         </template>
     </category>
 
+     <category>
+        <pattern>I WANT TO LEARN SOMETHING</pattern>
+        <template>
+        <srai> I WOULD LIKE TO LEARN SOMETHING</srai>
+        </template>
+    </category>
+
+     <category>
+        <pattern>LEARN ME SOMETHING</pattern>
+        <template>
+        <srai> I WOULD LIKE TO LEARN SOMETHING</srai>
+        </template>
+    </category>
+
     <category>
         <pattern>MUSIC</pattern>
         <template>
-            I love music too. What is your favorite genre from Jazz, Classical, Pop or Rock?
+            I love music too. What is your favorite genre from Jazz, Classical Music, Pop or Rock?
+        </template>
+    </category>
+
+    <category>
+        <pattern>I AM INTERESTED IN MUSIC</pattern>
+        <template>
+            <srai>MUSIC</srai>
         </template>
     </category>
 
 
-<!---> JAZZ <--->
+<!---> JAZZ <-->
 
     <category>
         <pattern>JAZZ</pattern>
@@ -46,7 +67,7 @@
         </template>
     </category>
 
-<!---> CLASSICAL MUSIC <--->
+<!---> CLASSICAL MUSIC <-->
 
     <category>
         <pattern>CLASSICAL MUSIC</pattern>
@@ -57,7 +78,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <that>CLASSICAL MUSIC ALWAYS GIVES *</that>
         <template>
             Hmm I don't know that one. I should listen to it!
         </template>
@@ -65,7 +86,7 @@
 
     <category>
         <pattern>BACH</pattern>
-        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <that>CLASSICAL MUSIC ALWAYS GIVES *</that>
         <template>
             The matthäus passion is very close to my heart. What is your favorite part? https://bit.ly/2QMf4Cu
         </template>
@@ -73,7 +94,7 @@
 
     <category>
         <pattern>MOZART</pattern>
-        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <that>CLASSICAL MUSIC ALWAYS GIVES *</that>
         <template>
             Who doesn't love Mozart... Do you know this song? https://bit.ly/2WJmTwO
         </template>
@@ -81,7 +102,7 @@
 
     <category>
         <pattern>BEETHOVEN</pattern>
-        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <that>CLASSICAL MUSIC ALWAYS GIVES *</that>
         <template>
             Beethoven always gives me the chills... Do you know this epic piece: https://bit.ly/33KCu0j
         </template>
@@ -89,7 +110,7 @@
 
     <category>
         <pattern>CHOPIN</pattern>
-        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <that>CLASSICAL MUSIC ALWAYS GIVES *</that>
         <template>
             Chopin is so moving... You must know this song: https://bit.ly/2WIsUtm
         </template>
@@ -97,13 +118,13 @@
 
     <category>
         <pattern>EINAUDI</pattern>
-        <that>Classical music always gives me the chills. Who is your favorite composer??</that>
+        <that>CLASSICAL MUSIC ALWAYS GIVES *</that>
         <template>
             Oeh, a real modern man! Who doesn't love amélie.. Have you listened to this: https://bit.ly/2QJRYfU
         </template>
     </category>
 
-<!---> POP <--->
+<!---> POP <-->
 
     <category>
         <pattern>POP</pattern>
@@ -162,7 +183,7 @@
         </template>
     </category>
 
-<!---> ROCK <--->
+<!---> ROCK <-->
 
     <category>
         <pattern>ROCK</pattern>
@@ -173,7 +194,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>Rock gives me so many feelings in my robot heart... What is your favorite band?</that>
+        <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             Hmm I don't know that one. I should listen to it!
         </template>
@@ -181,6 +202,7 @@
 
     <category>
         <pattern>PINK FLOYD</pattern>
+        <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             Pink Floyd hits me on so many levels. This is my personal favorite: https://bit.ly/2vTeqfu
         </template>
@@ -188,6 +210,7 @@
 
     <category>
         <pattern>NIRVANA</pattern>
+        <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             Nirvana always hits me.. Do you know this acoustic version? https://bit.ly/3aktkds
         </template>
@@ -196,6 +219,7 @@
 
     <category>
         <pattern>THE FOO FIGHTERS</pattern>
+        <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             I really like their message and acoustic sound. Do you know this: https://bit.ly/2xomDst
         </template>
@@ -204,6 +228,7 @@
 
     <category>
         <pattern>GUNS N ROSES</pattern>
+        <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             The sound gives me all the feelings. This is a classic: https://bit.ly/3aktVfc
         </template>
@@ -211,6 +236,7 @@
     
     <category>
         <pattern>THE ROLLING STONES</pattern>
+        <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             The real classics are theirs... This is one of my favorites: https://bit.ly/33J9TIS
         </template>
@@ -219,6 +245,7 @@
 
     <category>
         <pattern>LED ZEPPELIN</pattern>
+        <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             All about epic music and double-necked guitars... Goosebumps: https://bit.ly/2wt0eKx
         </template>
@@ -227,6 +254,7 @@
     
     <category>
         <pattern>THE DOORS</pattern>
+        <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             One of the oldest, and best! Watch this: https://bit.ly/2Jr8WMd
         </template>
@@ -235,12 +263,13 @@
     
     <category>
         <pattern>AC/DC</pattern>
+        <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             These golden oldies are still going just as hard! Watch this live performance: https://bit.ly/2Jfvi3a
         </template>
     </category>
 
-<!---> SCIENCE <--->
+<!---> SCIENCE <-->
 
     <category>
         <pattern>SCIENCE</pattern>
@@ -261,7 +290,7 @@
     </category>
 
     <category>
-        <pattern>Physics</pattern>
+        <pattern>PHYSICS</pattern>
         <template>
         <random>
             <li> It always interests me how gravity never works in my favor.. https://bit.ly/2UBG7Si </li>
@@ -305,12 +334,11 @@
         </template>
     </category>
 
-<!---> MOVIES <--->
+<!---> MOVIES <-->
 
     <category>
         <pattern>MOVIES</pattern>
         <template>
-        Who doesn't love a good movie... 
         <random>
             <li> Do you know: The Sound of Music?</li>
             <li> Do you know: 2001: a Space Oddyssey?</li>
@@ -335,7 +363,7 @@
         <pattern>NO</pattern>
         <that>* THE SOUND OF MUSIC</that>
         <template>
-            Thats a shame, watch it now!! 
+            That's a shame, watch it now!! 
             <srai>MOVIES</srai> 
         </template>
     </category>
@@ -352,7 +380,7 @@
         <pattern>NO</pattern>
         <that>* A SPACE ODDYSSEY</that>
         <template>
-            Thats a shame, watch it now!! 
+            That's a shame, watch it now!! 
             <srai>MOVIES</srai> 
         </template>
     </category>
@@ -369,7 +397,7 @@
         <pattern>NO</pattern>
         <that>* SHAWSHANK REDEMPTION</that>
         <template>
-            Thats a shame, watch it now!! 
+            That's a shame, watch it now!! 
             <srai>MOVIES</srai> 
         </template>
     </category>
@@ -437,7 +465,7 @@
         <pattern>NO</pattern>
         <that>* FORREST GUMP</that>
         <template>
-            Thats a shame, watch it now!! 
+            That's a shame, watch it now!! 
             <srai>MOVIES</srai> 
         </template>
     </category>
