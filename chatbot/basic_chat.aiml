@@ -5,7 +5,7 @@
     <category>
         <pattern>*</pattern>
         <template>
-            Hi! How are you doing today? "Good" or "not so good"?
+            Hi! How are you doing today? "Feeling good" or "not so good"?
         </template>
     </category> 
     
@@ -26,7 +26,7 @@
     <category>
         <pattern>FEELING GOOD</pattern>
         <template>
-        <think><set name="feeling">bored</set></think>
+        <think><set name="feeling">good</set></think>
         Great to hear that! 
         <srai>RANDOM SUGGESTIONS</srai>
         </template>
@@ -136,7 +136,7 @@
         <pattern>* SAD</pattern>
         <template>
        <condition name="feeling">
-        <li value="sad"></li>
+        <li value="sad"><srai>STILL FEELING</srai></li>
         <li><srai>SAD</srai></li>
         </condition>
         </template>
@@ -146,7 +146,7 @@
         <pattern>* ANGRY</pattern>
         <template>
        <condition name="feeling">
-        <li value="angry"></li>
+        <li value="angry"><srai>STILL FEELING</srai></li>
         <li><srai>ANGRY</srai></li>
         </condition>
         </template>
@@ -156,7 +156,7 @@
         <pattern>* WORRIED</pattern>
         <template>
        <condition name="feeling">
-        <li value="worried"></li>
+        <li value="worried"><srai>STILL FEELING</srai></li>
         <li><srai>WORRIED</srai></li>
         </condition>
         </template>
@@ -169,15 +169,6 @@
         </template>
     </category>
 
-    
-<category>
-        <pattern>YES</pattern>
-        <that>* MOVIES</that>
-        <template>
-        !komt nog! <srai>MOVIES</srai>  
-        </template>
-    </category>
-# verwijst naar Other_Conversations
 
 
 <category>
@@ -204,20 +195,6 @@
         <pattern>* JOKE</pattern>
         <template> 
             Do you want to hear a joke?
-        </template>
-    </category>
- 
-   <category>
-        <pattern>HAHA</pattern>
-        <template> 
-        Glad you liked that! <srai>RANDOM SUGGESTIONS</srai>
-        </template>
-    </category>
-    
-     <category>
-        <pattern>HAHAHA</pattern>
-        <template> 
-        <srai>HAHA</srai>
         </template>
     </category>
     
@@ -251,6 +228,13 @@
     <category>
         <pattern>YES</pattern>
         <that>ARE YOU STILL FEELING *</that>
+        <template>
+        <srai>STILL FEELING</srai>
+        </template>
+    </category> 
+    
+    <category>
+        <pattern>STILL FEELING</pattern>
         <template>
         <condition name="feeling">
         <li value="sad">I understand, it's not easy. But <srai>SAD QUOTE</srai></li>
@@ -314,7 +298,6 @@
         <li>it makes me very happy to talk to you today!</li>
         <li>it is great to have a friend like you!</li>
         <li>I hope someone told you today how amazing you are. If not: You are amazing! :D</li>
-        <li></li>
         </random>
         </template>
     </category> 
@@ -323,7 +306,7 @@
    <category>
         <pattern>YES</pattern>
         <that>* ACTIVITIES</that>
-        <template> 
+        <template> Ok then!
           <srai>ACTIVITIES</srai>>
         </template>
     </category> 
@@ -340,8 +323,8 @@
         <pattern>GAME</pattern>
         <template> 
         <random>
-        <li>https://www.elkspel.nl/behendigheid/bubble-shooter</li>
-        <li>https://www.elkspel.nl/g/kill-the-coronavirus</li>
+        <li>This is a nice one: https://www.elkspel.nl/behendigheid/bubble-shooter</li>
+        <li>You will like this one: https://www.elkspel.nl/g/kill-the-coronavirus</li>
         <li><srai>THOUGHT GAME</srai></li>
         </random>
         </template>
@@ -367,19 +350,39 @@
       !komt nog! <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
         </template>
     </category>
-# verwijst naar Other_Conversations
+    # verwijst naar Other_Conversations
+
+   <category>
+        <pattern>LEARN</pattern>
+        <template>
+        !komt nog! <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
+        </template>
+    </category>
+    # verwijst naar Other_Conversations
+
+ <category>
+        <pattern>LEARN SOMETHING</pattern>
+        <template>
+        !komt nog! <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
+        </template>
+    </category>
+    # verwijst naar Other_Conversations
     
     <category>
-        <pattern>YES</pattern>
-        <that>* ABOUT MUSIC</that>
+        <pattern>MUSIC</pattern>
         <template>
-      !komt nog! <srai>MUSIC</srai> 
+        !komt nog! <srai>MUSIC</srai> 
         </template>
     </category>
 # verwijst naar Other_Conversations
     
-    
-
+   <category>
+        <pattern>SPORT</pattern>
+        <template>
+        !komt nog! <srai>SPORT</srai> 
+        </template>
+    </category>
+# verwijst naar Other_Conversations
    
    
 #thought game:
@@ -590,9 +593,58 @@
     </category>
     
     <category>
+        <pattern>SURE</pattern>
+        <template>
+            <srai>YES</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>OF COURSE</pattern>
+        <template>
+            <srai>YES</srai>
+        </template>
+    </category>
+    
+    <category>
         <pattern>YES *</pattern>
         <template>
             <srai>YES</srai>
+        </template>
+    </category>
+     
+        <category>
+        <pattern>HAHA</pattern>
+        <template> 
+        Glad you liked that! <srai>RANDOM SUGGESTIONS</srai>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>HAHAHA</pattern>
+        <template> 
+        <srai>HAHA</srai>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>GREAT</pattern>
+        <template> 
+        <srai>HAHA</srai>
+        </template>
+    </category>
+    
+       <category>
+        <pattern>NICE</pattern>
+        <template> 
+        <srai>HAHA</srai>
+        </template>
+    </category>
+    
+       <category>
+        <pattern>AMAZING</pattern>
+        <template> 
+        <srai>HAHA</srai>
         </template>
     </category>
      
@@ -621,7 +673,12 @@
     <category>
         <pattern>THANKS</pattern>
         <template>
-            You are welcome! <srai>RANDOM SUGGESTIONS</srai>
+        <random>
+        <li>You are welcome! </li>
+        <li>Sure, no problem!</li>
+        <li>Always happy to help you!</li>
+        </random>
+        <srai>RANDOM SUGGESTIONS</srai>
         </template>
     </category>
 
@@ -660,20 +717,54 @@
         </template>
     </category>
     
+     <category>
+        <pattern>I HATE YOU</pattern>
+        <template>
+        Let's be nice to each other. I thought we were BFF's
+        </template>
+    </category>
+    
     <category>
         <pattern>* GREAT</pattern>
         <template>
-        Good to hear that!
+        Good to hear that! <srai>RANDOM SUGGESTIONS</srai>
         </template>
     </category>
     
     <category>
         <pattern>* AMAZING</pattern>
         <template>
-        Good to hear that!
+        Good to hear that! <srai>RANDOM SUGGESTIONS</srai>
         </template>
     </category>
     
+    <category>
+        <pattern>I LOVE YOU</pattern>
+        <template>
+        That's so sweet of you! You are my BFF! <srai>RANDOM SUGGESTIONS</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>I LIKE YOU</pattern>
+        <template>
+        That's so sweet of you! You are my BFF! <srai>RANDOM SUGGESTIONS</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>SORRY</pattern>
+        <template>
+        It's ok, I will just delete it from my memory. :)
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* SORRY</pattern>
+        <template>
+        No worries. <srai>RANDOM SUGGESTIONS</srai>
+        </template>
+    </category>
     
     
 
@@ -683,7 +774,6 @@
          What's the matter? Are you "sad", "sick", "bored", "worried" or "angry"? 
       </template>
    </category>
-
 
     <category>
       <pattern>* HELP ME</pattern>
@@ -737,14 +827,67 @@
       </template>
    </category> 
   
+    <category>
+      <pattern>BYE</pattern>
+      <template>
+      Oh, are you leaving? Hope to talk to you again soon! Bye bye!
+      </template>
+   </category> 
  
+    <category>
+      <pattern>GOOD BYE</pattern>
+      <template>
+      <srai>BYE</srai>
+      </template>
+   </category> 
+  
+   <category>
+      <pattern>WHAT CAN YOU DO</pattern>
+      <template>
+      There are so many options! I can find you a game or puzzle, we can talk about music, sport or movies, maybe you want to learn something, or shall I just tell you a joke? I only need one word to know what you want. :D
+      </template>
+   </category>
+   
+   <category>
+      <pattern>WHAT CAN WE DO</pattern>
+      <template>
+      <srai>WHAT CAN YOU DO</srai>
+      </template>
+   </category>
 
+<category>
+      <pattern>WHAT NOW</pattern>
+      <template>
+      <srai>WHAT CAN YOU DO</srai>
+      </template>
+   </category>
+   
+   <category>
+      <pattern>NOW WHAT</pattern>
+      <template>
+      <srai>WHAT CAN YOU DO</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>WOW</pattern>
+      <template>
+      You are easily amazed. :) <srai>RANDOM SUGGESTIONS</srai>
+      </template>
+   </category>
+   
+     <category>
+      <pattern>NOTHING</pattern>
+      <template>
+      Oh, I see. Well... <srai>RANDOM SUGGESTIONS</srai>
+      </template>
+   </category>
 
 <category>
         <pattern>RANDOM SUGGESTIONS</pattern>
         <template>
         <random>
-            <li>Well, let's just chat a bit. Do you prefer to talk about "movies", "music" or "sport"?</li>
+            <li>Well, let's just chat a bit more. Do you prefer to talk about "movies", "music" or "sport"?</li>
             <li>By the way, do you want to hear a good joke?</li>
             <li><condition name="feeling">
                <li value="good"><srai>RANDOM SUGGESTIONS</srai></li>
