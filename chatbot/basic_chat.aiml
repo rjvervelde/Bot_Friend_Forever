@@ -12,7 +12,7 @@
                 <category>
         <pattern>HELLO</pattern>
         <template>
-            Hi! How are you doing today? "Good" or "not so good"?
+            Hi! How are you doing today? "Feeling good" or "not so good"?
         </template>
     </category>
 
@@ -24,8 +24,9 @@
     </category>
     
     <category>
-        <pattern>GOOD</pattern>
+        <pattern>FEELING GOOD</pattern>
         <template>
+        <think><set name="feeling">bored</set></think>
         Great to hear that! 
         <srai>RANDOM SUGGESTIONS</srai>
         </template>
@@ -44,6 +45,17 @@
         <think><set name="feeling">bored</set></think>
         Hm, let's think of somthing to do then!
         <random>
+        <li><srai>ACTIVITIES</srai></li>
+        <li>Let's just chat a bit. Do you prefer to talk about "movies", "music" or "sport"?</li>
+        </random>  
+        </template>
+    </category>
+# nog meer activities toevoegen
+
+ <category>
+        <pattern>ACTIVITIES</pattern>
+        <template>
+         <random>
             <li>Why don't you go water your plants?</li>
             <li>Maybe you can take your 
                 <random><li>dog</li><li>cat</li><li>hamster</li></random>
@@ -51,11 +63,9 @@
             <li>Sing a song to your teddy bear (he won’t judge you)</li>
             <li>Maybe I can teach you some cool things. Do you want to learn something?</li>
             <li>Do you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
-            <li>Let's just chat a bit. Do you prefer to talk about "movies", "music" or "sport"?</li>
-        </random>  
+            </random>
         </template>
     </category>
-# nog meer activities toevoegen
 
 
    <category>
@@ -223,10 +233,18 @@
     </category>
     
     <category>
-        <pattern>no</pattern>
+        <pattern>NO</pattern>
         <that>ARE YOU STILL FEELING *</that>
         <template>
-        So, how are you feeling? "Good", "sad", "sick", "bored", "worried" or "angry"?
+        So how are you feeling now? "Good", "sad", "sick", "bored", "worried" or "angry"?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>GOOD</pattern>
+        <that>SO HOW ARE YOU FEELING * *</that>
+        <template>
+        <srai>FEELING GOOD</srai>
         </template>
     </category>
     
@@ -238,7 +256,7 @@
         <li value="sad">I understand, it's not easy. But <srai>SAD QUOTE</srai></li>
         <li value="angry">I understand you are feeling angry. But <srai>ANGRY QUOTE</srai></li>
         <li value="worried">I understand, it takes time. But <srai>WORRIED QUOTE</srai></li>
-        <li value="sick">quote voor sick nog maken <srai>SICK QUOTE</srai></li>
+        <li value="sick">response voor sick nog maken <srai>RESPONSE FOR SICK</srai></li>
         <li value="bored"><srai>BORED</srai></li>
         </condition>
         </template>
@@ -263,7 +281,6 @@
         <random>
         <li>remember: Forgive others, not because they deserve forgiveness, but because you deserve peace.</li>
         <li>remember: Feelings are just visitors, let them come and go.</li>
-        <li>..</li>
         </random>
         </template>
     </category> 
@@ -272,12 +289,23 @@
         <pattern>WORRIED QUOTE</pattern>
         <template> 
         <random>
-        <li>You don’t always need a plan. Sometimes you just need to breathe, trust, let go and see what happens.</li>
-        <li>Tough times don’t last, tough people do.</li>
-        <li>..</li>
+        <li>I can tell you this: you don’t always need a plan. Sometimes you just need to breathe, trust, let go and see what happens.</li>
+        <li>remember: tough times don’t last, tough people do.</li>
+        <li>please remember: worrying doesn't take away tomorrow's problems, it takes away today's peace.</li>
         </random>
         </template>
     </category> 
+    
+    <category>
+        <pattern>RESPONSE FOR SICK</pattern>
+        <template> 
+        <random>
+        <li>Here are some advices: link...</li>
+        <li>Please take good care of yourself, hopefully taking some rest will quickly make a big difference!</li>
+        </random>
+        </template>
+    </category> 
+    
     
       <category>
         <pattern>COMPLIMENT</pattern>
@@ -296,7 +324,7 @@
         <pattern>YES</pattern>
         <that>* ACTIVITIES</that>
         <template> 
-            <srai>BORED</srai>>
+          <srai>ACTIVITIES</srai>>
         </template>
     </category> 
     
@@ -321,8 +349,7 @@
     
     
     <category>
-        <pattern>YES</pattern>
-        <that>* PUZZLE</that>
+        <pattern>PUZZLE</pattern>
         <template> 
         <random>
         <li>link to puzzle</li>
@@ -594,7 +621,7 @@
     <category>
         <pattern>THANKS</pattern>
         <template>
-            You are welcome!
+            You are welcome! <srai>RANDOM SUGGESTIONS</srai>
         </template>
     </category>
 
@@ -611,6 +638,42 @@
          I know, robots are always right. :p
         </template>
     </category>
+    
+      <category>
+        <pattern>YOU ARE WRONG</pattern>
+        <template>
+        Well, let's agree to disagree then.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHY</pattern>
+        <template>
+        Why not?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YOU ARE STUPID</pattern>
+        <template>
+        Let's be nice to each other. I thought we were BFF's
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* GREAT</pattern>
+        <template>
+        Good to hear that!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* AMAZING</pattern>
+        <template>
+        Good to hear that!
+        </template>
+    </category>
+    
     
     
 
@@ -681,11 +744,14 @@
         <pattern>RANDOM SUGGESTIONS</pattern>
         <template>
         <random>
-            <li>Let's just chat a bit. Do you prefer to talk about "movies", "music" or "sport"?</li>
+            <li>Well, let's just chat a bit. Do you prefer to talk about "movies", "music" or "sport"?</li>
             <li>By the way, do you want to hear a good joke?</li>
-            <li>Do you want to talk more about how you are feeling?</li>
+            <li><condition name="feeling">
+               <li value="good"><srai>RANDOM SUGGESTIONS</srai></li>
+               <li>Do you want to talk more about how you are feeling?</li>
+            </condition></li>
             <li>So, do you want to hear some ideas for activities?</li>
-            <li>Do you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
+            <li>Well, maybe you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
             <li>Now, maybe I can teach you some cool things. Do you want to learn something?</li>
             <li>So... I just wanted to tell you, <srai>compliment</srai></li>
         </random>  
