@@ -240,6 +240,7 @@
         </template>
     </category>
 
+<!---> SCIENCE <--->
 
     <category>
         <pattern>SCIENCE</pattern>
@@ -276,11 +277,168 @@
         <random>
             <li> Which came first, the chicken or the egg? https://bit.ly/33XLfVf</li>
             <li> THE MITOCHONDRIA IS THE POWER HOUSE OF THE CELL!! https://bit.ly/3buEdtg </li>
-            <li> https://bit.ly/3apsDQc </li>
+            <li> We were all small rodents once... https://bit.ly/3apsDQc </li>
         </random>
         </template>
     </category>
 
-    
+    <category>
+        <pattern>PHYCHOLOGY</pattern>
+        <template>
+        <random>
+            <li> Do you know your personality type? I am an extravert! https://www.16personalities.com</li>
+            <li> I like doing tests (but am not good at it). Do you know your IQ? https://iqtest.com/ </li>
+            <li> Are you familiar with Cognitive Behavioral Therapy? No? Watch this: https://bit.ly/3brd1f3 </li>
+            <li> This video talks about mental disorders.. Very interesting! https://bit.ly/39l4bhm</li>
+        </random>
+        </template>
+    </category>
 
+    <category>
+        <pattern>PHILOSOPHY</pattern>
+        <template>
+        <random>
+            <li> Thinking that the world doesn't hold any meaning can be very comfortable sometimes. Do you know Niezsche? https://bit.ly/2xqnVDj</li>
+            <li> Not only western philosophy is interesting. Do you know the eastern philosophy of taoism? https://bit.ly/3bt6f8J </li>
+            <li> Read a random article on the online Stanford Philosophy website! One of the bests. https://stanford.io/3bwzqrz </li>
+        </random>
+        </template>
+    </category>
+
+<!---> MOVIES <--->
+
+    <category>
+        <pattern>MOVIES</pattern>
+        <template>
+        Who doesn't love a good movie... 
+        <random>
+            <li> Do you know: The Sound of Music?</li>
+            <li> Do you know: 2001: a Space Oddyssey?</li>
+            <li> Do you know: Shawshank Redemption?</li>
+            <li> Do you know: The Lord of the Rings?</li>
+            <li> Do you know: Forrest Gump?</li>
+            <li> Do you know: Spirited Away?</li>
+            <li> Do you know: Interstellar?</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* THE SOUND OF MUSIC</that>
+        <template>
+            Nice! This must be my favorite movie, the music gives me chills down my robot spine: https://bit.ly/2xoPHQr
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>* THE SOUND OF MUSIC</that>
+        <template>
+            Thats a shame, watch it now!! 
+            <srai>MOVIES</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* A SPACE ODDYSSEY</that>
+        <template>
+            Such an old movie, with so many layers! If you want to hear some film criticism, watch this: https://bit.ly/2yaPktf
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>* A SPACE ODDYSSEY</that>
+        <template>
+            Thats a shame, watch it now!! 
+            <srai>MOVIES</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* SHAWSHANK REDEMPTION</that>
+        <template>
+            Nice! Number one on IMDB, and definitely amazing.
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>* SHAWSHANK REDEMPTION</that>
+        <template>
+            Thats a shame, watch it now!! 
+            <srai>MOVIES</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* INTERSTELLAR</that>
+        <template>
+            This movie is so well made, and cool... Watch this video about it: https://bit.ly/2xsMD5K
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>* INTERSTELLAR</that>
+        <template>
+            Thats a shame, watch it now!! 
+            <srai>MOVIES</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* LORD OF THE RINGS</that>
+        <template>
+            More than just three movies, it's an entire world! It's explained here: https://bit.ly/3dBpXRJ
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>* LORD OF THE RINGS</that>
+        <template>
+            Thats a shame, watch it now!! 
+            <srai>MOVIES</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* SPIRITED AWAY</that>
+        <template>
+            Hayao Miyazaki is one of the greatest creative minds of this time... Watch the making of! https://bit.ly/2yaQ5CB
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>* SPIRITED AWAY</that>
+        <template>
+            Thats a shame, watch it now!! 
+            <srai>MOVIES</srai> 
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* FORREST GUMP</that>
+        <template>
+            One of my favorite characters of all time... Watch this movie interpretation! https://bit.ly/2QMiBko
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>* FORREST GUMP</that>
+        <template>
+            Thats a shame, watch it now!! 
+            <srai>MOVIES</srai> 
+        </template>
+    </category>
 </aiml>
