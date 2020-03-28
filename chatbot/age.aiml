@@ -2,9 +2,24 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>HELLO</pattern>
+        <pattern>I AM * YEARS OLD</pattern>
+        <think><set name="age"><star/></set></think>
         <template>
-            Well, hello!
+            Nice to hear you are <get name="age"></get> years old! Would you like to learn something?
+        </template>
+    </category>
+
+    <category>
+        <pattern>I AM *</pattern>
+        <template>
+            <srai>I AM <star/> YEARS OLD</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WOULD LIKE TO LEARN SOMETHING</pattern>
+        <template>
+            Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
         </template>
     </category>
 
