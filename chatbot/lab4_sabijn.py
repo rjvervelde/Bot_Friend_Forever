@@ -3,6 +3,7 @@ from sentiment_fancy import sentiment_of_text
 
 def set_parameters():
     kernel.setPredicate("status", "neutral")
+    kernel.setPredicate("age", "undefined")
     return
 
 def extract_information(user_message):

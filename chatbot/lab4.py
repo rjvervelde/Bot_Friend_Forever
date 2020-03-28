@@ -34,4 +34,4 @@ while True:
         # syntactic parse
         # prosodic parse
         
-        return bot_response
+        print(bot_response)

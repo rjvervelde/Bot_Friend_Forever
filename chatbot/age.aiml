@@ -2,9 +2,24 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>HELLO</pattern>
+        <pattern>I WAS BORN ON *</pattern>
+        <think><set name="birthday"><star/></set></think>
         <template>
-            Well, hello!
+            Allright, you were born on <get name="birthday"></get>? I was born on March 23rd 2020!
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW LONG TILL IT IS MY BIRTHDAY</pattern>
+        <template>
+            Since you were born on, <get name="birthday"></get>, your birhtday will be in x days.
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WOULD LIKE TO LEARN SOMETHING</pattern>
+        <template>
+            Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
         </template>
     </category>
 
