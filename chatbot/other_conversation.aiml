@@ -11,7 +11,7 @@
     <category>
         <pattern>I WOULD LIKE TO LEARN SOMETHING</pattern>
         <template>
-            Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music", "Sports")
+            Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
         </template>
     </category>
 
