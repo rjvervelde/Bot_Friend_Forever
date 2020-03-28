@@ -5,14 +5,27 @@
     <category>
         <pattern>*</pattern>
         <template>
-            Hi! How are you doing today? "Feeling good" or "not so good"?
+        <srai>HELLO</srai> 
         </template>
-    </category> 
+    </category>
+   
     
-                <category>
+      <category>
         <pattern>HELLO</pattern>
         <template>
-            Hi! How are you doing today? "Feeling good" or "not so good"?
+        <condition name="name">
+        <li value="">Hi, nice to meet you! What is your name?</li>
+        <li>Hi <get name="name"></get>! How are you doing today? "Feeling good" or "not so good"?</li>
+        </condition>
+        </template>
+    </category>
+    
+      <category>
+        <pattern>*</pattern>
+        <that>* * IS YOUR NAME</that>
+        <template>
+        <think><set name="name"><star/></set></think>
+        <srai>HELLO</srai>
         </template>
     </category>
 
@@ -295,7 +308,7 @@
         <pattern>COMPLIMENT</pattern>
         <template> 
         <random>
-        <li>it makes me very happy to talk to you today!</li>
+        <li>it makes me very happy to talk to you today, <get name="name"></get>!</li>
         <li>it is great to have a friend like you!</li>
         <li>I hope someone told you today how amazing you are. If not: You are amazing! :D</li>
         </random>
@@ -367,6 +380,14 @@
         </template>
     </category>
     # verwijst naar Other_Conversations
+    
+    <category>
+        <pattern>MOVIES</pattern>
+        <template>
+        !komt nog! <srai>MOVIES</srai> 
+        </template>
+    </category>
+# verwijst naar Other_Conversations
     
     <category>
         <pattern>MUSIC</pattern>
@@ -470,14 +491,14 @@
         <srai>CHECK FOR ANSWER <star/></srai>
           <condition name="WrongOrRight">
                 <li value="wrong">
-                    It's not <star/>. You can make your forth guess.</li>
+                    It's not <star/>. You can make your fourth guess.</li>
                 </condition>
         </template>
     </category>
     
     <category>
         <pattern>*</pattern>
-     <that>* * MAKE YOUR FORTH GUESS</that>
+     <that>* * MAKE YOUR FOURTH GUESS</that>
         <template>
         <srai>CHECK FOR ANSWER <star/></srai>
           <condition name="WrongOrRight">
@@ -665,7 +686,7 @@
     <category>
         <pattern>HOW ARE YOU</pattern>
         <template>
-            Feeling a little rusty, but fine! And you? "Good" or "not so good"?
+            Feeling a little rusty, but fine! And you? "Feeling good" or "not so good"?
         </template>
     </category>
 
@@ -674,7 +695,7 @@
         <pattern>THANKS</pattern>
         <template>
         <random>
-        <li>You are welcome! </li>
+        <li>You're welcome! </li>
         <li>Sure, no problem!</li>
         <li>Always happy to help you!</li>
         </random>
@@ -868,6 +889,13 @@
       <srai>WHAT CAN YOU DO</srai>
       </template>
    </category>
+   
+   <category>
+      <pattern>AND NOW</pattern>
+      <template>
+      <srai>WHAT CAN YOU DO</srai>
+      </template>
+   </category>
 
    <category>
       <pattern>WOW</pattern>
@@ -879,7 +907,21 @@
      <category>
       <pattern>NOTHING</pattern>
       <template>
-      Oh, I see. Well... <srai>RANDOM SUGGESTIONS</srai>
+      Oh, I see... <srai>RANDOM SUGGESTIONS</srai>
+      </template>
+   </category>
+   
+   <category>
+      <pattern>NOT FUNNY</pattern>
+      <template>
+      Hm, maybe we don't share the same sense of humor. <srai>RANDOM SUGGESTIONS</srai>
+      </template>
+   </category>
+   
+   <category>
+      <pattern>* NOT FUNNY</pattern>
+      <template>
+      Hm, maybe we don't share the same sense of humor. <srai>RANDOM SUGGESTIONS</srai>
       </template>
    </category>
 
@@ -888,12 +930,12 @@
         <template>
         <random>
             <li>Well, let's just chat a bit more. Do you prefer to talk about "movies", "music" or "sport"?</li>
-            <li>By the way, do you want to hear a good joke?</li>
+            <li>By the way <get name="name"></get>, do you want to hear a good joke?</li>
             <li><condition name="feeling">
                <li value="good"><srai>RANDOM SUGGESTIONS</srai></li>
                <li>Do you want to talk more about how you are feeling?</li>
             </condition></li>
-            <li>So, do you want to hear some ideas for activities?</li>
+            <li>So <get name="name"></get>, do you want to hear some ideas for activities?</li>
             <li>Well, maybe you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
             <li>Now, maybe I can teach you some cool things. Do you want to learn something?</li>
             <li>So... I just wanted to tell you, <srai>compliment</srai></li>
@@ -906,7 +948,10 @@
         <pattern>*</pattern>
         <that>* * </that>
         <template>
-       <srai>RANDOM SUGGESTIONS</srai> 
+        <condition name="feeling">
+        <li value="">Hi <get name="name"></get>! How are you doing today? "Feeling good" or "not so good"?</li>
+        <li><srai>RANDOM SUGGESTIONS</srai> </li>
+        </condition>
         </template>
     </category>
         
