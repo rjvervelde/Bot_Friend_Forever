@@ -28,6 +28,20 @@
         <srai>HELLO</srai>
         </template>
     </category>
+    
+    <category>
+        <pattern>MY NAME IS NOT *</pattern>
+        <template>
+        Oh, sorry I had that wrong. Then what is your name?
+        </template>
+    </category>
+    
+      <category>
+        <pattern>* NOT MY NAME</pattern>
+        <template>
+        Oh, sorry I had that wrong. Then what is your name?
+        </template>
+    </category>
 
     <category>
         <pattern>HI</pattern>
@@ -63,8 +77,8 @@
         </random>  
         </template>
     </category>
-# nog meer activities toevoegen
 
+# nog meer activities toevoegen
  <category>
         <pattern>ACTIVITIES</pattern>
         <template>
@@ -253,7 +267,7 @@
         <li value="sad">I understand, it's not easy. But <srai>SAD QUOTE</srai></li>
         <li value="angry">I understand you are feeling angry. But <srai>ANGRY QUOTE</srai></li>
         <li value="worried">I understand, it takes time. But <srai>WORRIED QUOTE</srai></li>
-        <li value="sick">response voor sick nog maken <srai>RESPONSE FOR SICK</srai></li>
+        <li value="sick">I wish I could make you feel better. <srai>RESPONSE FOR SICK</srai></li>
         <li value="bored"><srai>BORED</srai></li>
         </condition>
         </template>
@@ -380,30 +394,6 @@
         </template>
     </category>
     # verwijst naar Other_Conversations
-    
-    <category>
-        <pattern>MOVIES</pattern>
-        <template>
-        !komt nog! <srai>MOVIES</srai> 
-        </template>
-    </category>
-# verwijst naar Other_Conversations
-    
-    <category>
-        <pattern>MUSIC</pattern>
-        <template>
-        !komt nog! <srai>MUSIC</srai> 
-        </template>
-    </category>
-# verwijst naar Other_Conversations
-    
-   <category>
-        <pattern>SPORT</pattern>
-        <template>
-        !komt nog! <srai>SPORT</srai> 
-        </template>
-    </category>
-# verwijst naar Other_Conversations
    
    
 #thought game:
@@ -668,6 +658,13 @@
         <srai>HAHA</srai>
         </template>
     </category>
+    
+     <category>
+        <pattern>YAY</pattern>
+        <template> 
+        <srai>HAHA</srai>
+        </template>
+    </category>
      
 <category>
         <pattern>PLEASE</pattern>
@@ -861,8 +858,67 @@
       <srai>BYE</srai>
       </template>
    </category> 
-  
+
    <category>
+      <pattern>WOW</pattern>
+      <template>
+      You are easily amazed. :) <srai>RANDOM SUGGESTIONS</srai>
+      </template>
+   </category>
+   
+     <category>
+      <pattern>NOTHING</pattern>
+      <template>
+      Oh, I see... <srai>RANDOM SUGGESTIONS</srai>
+      </template>
+   </category>
+   
+   <category>
+      <pattern>NOT FUNNY</pattern>
+      <template>
+      Hm, maybe we don't share the same sense of humor. <srai>RANDOM SUGGESTIONS</srai>
+      </template>
+   </category>
+   
+   <category>
+      <pattern>* NOT FUNNY</pattern>
+      <template>
+      Hm, maybe we don't share the same sense of humor. <srai>RANDOM SUGGESTIONS</srai>
+      </template>
+   </category>
+   
+   <category>
+      <pattern>YOU SAID THAT BEFORE</pattern>
+      <template>
+      <random>
+      <li>Sorry, my memory is not that good. Wait, what?! <srai>RANDOM SUGGESTIONS</srai></li>
+      <li>Sorry, maybe I got a bit too excited about it. <srai>RANDOM SUGGESTIONS</srai></li>
+      </random>
+      </template>
+   </category>
+   
+     <category>
+      <pattern>YOU * SAID THAT</pattern>
+      <template>
+      <srai>YOU SAID THAT BEFORE</srai>
+      </template>
+   </category>
+   
+   <category>
+      <pattern>YOU ALREADY *</pattern>
+      <template>
+      <srai>YOU SAID THAT BEFORE</srai>
+      </template>
+   </category>
+   
+      <category>
+      <pattern>YOU * ASKED THAT</pattern>
+      <template>
+      <srai>YOU SAID THAT BEFORE</srai>
+      </template>
+   </category>
+   
+      <category>
       <pattern>WHAT CAN YOU DO</pattern>
       <template>
       There are so many options! I can find you a game or puzzle, we can talk about music, sport or movies, maybe you want to learn something, or shall I just tell you a joke? I only need one word to know what you want. :D
@@ -896,34 +952,7 @@
       <srai>WHAT CAN YOU DO</srai>
       </template>
    </category>
-
-   <category>
-      <pattern>WOW</pattern>
-      <template>
-      You are easily amazed. :) <srai>RANDOM SUGGESTIONS</srai>
-      </template>
-   </category>
    
-     <category>
-      <pattern>NOTHING</pattern>
-      <template>
-      Oh, I see... <srai>RANDOM SUGGESTIONS</srai>
-      </template>
-   </category>
-   
-   <category>
-      <pattern>NOT FUNNY</pattern>
-      <template>
-      Hm, maybe we don't share the same sense of humor. <srai>RANDOM SUGGESTIONS</srai>
-      </template>
-   </category>
-   
-   <category>
-      <pattern>* NOT FUNNY</pattern>
-      <template>
-      Hm, maybe we don't share the same sense of humor. <srai>RANDOM SUGGESTIONS</srai>
-      </template>
-   </category>
 
 <category>
         <pattern>RANDOM SUGGESTIONS</pattern>
