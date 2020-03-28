@@ -4,26 +4,76 @@
     <category>
         <pattern>*</pattern>
         <template>
-            Hi! How is your day so far?
+            Hi! How are you feeling?
         </template>
     </category>
     
     <category>
         <pattern>MY DAY *</pattern>
         <template>
-            This works so far
+            <condition name = "status" value = "not so good">
+                That sucks, what happend?
+            </condition>
+            
+            <condition name = "status" value = "good">
+                Good to hear you feeling good. What's the reason?
+            </condition>
         </template>
     </category>
 
     <category>
-        <pattern>NOT SO GOOD</pattern>
+        <pattern>MY NAME IS * AND I AM * YEARS OLD</pattern>
         <template>
-            What's the matter? Are you "sad", "sick", "bored", "worried" or "angry"?
+            Hi <star/>. I am also <star index="2"/> years old!
         </template>
     </category>
     
+
      <category>
-        <pattern>BORED</pattern>
+        <pattern>I AM FEELING * </pattern>
+        <template>
+            <think><set name="feeling"><star/></set></think>
+
+            <condition name = "feeling" value = "bored">
+                <random>
+                    <li>Why don't you go water your plants?</li>
+                    <li>Maybe you can take your 
+                        <random>
+                            <li>dog</li>
+                            <li>cat</li>
+                            <li>hamster</li>
+                        </random>
+                    for a walk</li>
+                    <li>Sing a song to your teddy bear (he won’t judge you)</li>
+                </random>  
+                
+            </condition>
+            
+            <condition name = "feeling" value = "sad">
+                What are you <get name="feeling"></get> about?
+            </condition>
+
+            <condition name = "feeling" value = "angry">
+                I can punch someone for you if you want. Who is it?
+            </condition>
+
+            <condition name = "feeling" value = "worried">
+                What are you worried about?
+            </condition>
+
+            <condition name = "feeling" value = "happy">
+                Good to hear you feeling good. What's the reason?
+            </condition>
+
+            <condition name = "feeling" value = "okay">
+                Okay, that's better than feeling sad, how can I make your day super?
+            </condition>
+
+        </template>
+    </category>
+
+     <!-- <category>
+        <pattern>* BORED ^</pattern>
         <template>
         <think><set name="feeling">bored</set></think>
         <random>
@@ -38,15 +88,13 @@
             <li>Sing a song to your teddy bear (he won’t judge you)</li>
         </random>  
         </template>
-    </category>
-# nog meer activities toevoegen
-
+    </category> -->
 
    <category>
-        <pattern>SAD</pattern>
+        <pattern>* SAD</pattern>
         <template>
         <think><set name="feeling">sad</set></think>
-        What is bothering you? I am here to listen to you!</template>
+        </template>
     </category>
 
 
@@ -110,9 +158,6 @@
         You're welcome! 
         </template>
     </category>
-
-
-    
     
 <category>
         <pattern>YES</pattern>
@@ -471,7 +516,6 @@
          <srai>HELP ME</srai>
       </template>
    </category>
-
 
 <category>
         <pattern>RANDOM SUGGESTIONS</pattern>
