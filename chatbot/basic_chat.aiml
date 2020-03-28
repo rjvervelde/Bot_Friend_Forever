@@ -710,21 +710,21 @@
    <category>
         <pattern>YOU ARE RIGHT</pattern>
         <template>
-         I know, robots are always right. :p
+         I know, robots are always right. :p <srai>RANDOM SUGGESTIONS</srai>
         </template>
     </category>
     
       <category>
         <pattern>YOU ARE WRONG</pattern>
         <template>
-        Well, let's agree to disagree then.
+        Well, let's agree to disagree then. <srai>RANDOM SUGGESTIONS</srai>
         </template>
     </category>
     
     <category>
         <pattern>WHY</pattern>
         <template>
-        Why not?
+        Why not?! <srai>RANDOM SUGGESTIONS</srai>
         </template>
     </category>
     
