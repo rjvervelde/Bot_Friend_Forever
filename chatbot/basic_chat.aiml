@@ -1015,9 +1015,12 @@
         <pattern>*</pattern>
         <that>* * </that>
         <template>
-        <condition name="feeling">
-        <li value="">Hi <get name="name"></get>! How are you doing today? "Feeling good" or "not so good"?</li>
-        <li><srai>RANDOM SUGGESTIONS</srai> </li>
+        <condition name="age">
+        <li value="">Age?</li>
+        <li><condition name="feeling">
+            <li value="">Hi <get name="name"></get>! How are you doing today? "Feeling good" or "not so good"?</li>
+            <li><srai>RANDOM SUGGESTIONS</srai> </li>
+        </condition></li>
         </condition>
         </template>
     </category>
