@@ -2,17 +2,17 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>I AM * YEARS OLD</pattern>
-        <think><set name="age"><star/></set></think>
+        <pattern>I WAS BORN ON *</pattern>
+        <think><set name="birthday"><star/></set></think>
         <template>
-            Nice to hear you are <get name="age"></get> years old! Would you like to learn something?
+            Allright, you were born on <get name="birthday"></get>? I was born on March 23rd 2020!
         </template>
     </category>
 
     <category>
-        <pattern>I AM *</pattern>
+        <pattern>HOW LONG TILL IT IS MY BIRTHDAY</pattern>
         <template>
-            <srai>I AM <star/> YEARS OLD</srai>
+            Since you were born on, <get name="birthday"></get>, your birhtday will be in x days.
         </template>
     </category>
 
