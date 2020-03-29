@@ -44,13 +44,13 @@
 <category>
         <pattern>AGE</pattern>
         <template>
-        So what is your age?
+       Ok! To get a better idea of what things you may like, I would like to know how old you are. So, could you please tell me your age?
         </template>
     </category>
     
     <category>
         <pattern>*</pattern>
-        <that>* * IS YOUR AGE</that>
+        <that>* * YOUR AGE</that>
         <template>
         <think><set name="age"><star/></set></think>
         Ok then. <srai>BEGINNING QUESTIONS</srai>
@@ -1040,7 +1040,7 @@
         <pattern>BEGINNING QUESTIONS</pattern>
         <template>
         <condition name="age">
-        <li value="">I don't know yet how old you are. So can you please tell me what is your age?</li>
+        <li value=""><srai>AGE</srai></li>
         <li><condition name="feeling">
             <li value="">Hi <get name="name"></get>! How are you doing today? "Feeling good" or "not so good"?</li>
             <li><srai>RANDOM SUGGESTIONS</srai> </li>
