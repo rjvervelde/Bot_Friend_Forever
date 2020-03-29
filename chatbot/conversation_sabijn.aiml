@@ -16,8 +16,10 @@
             </condition>
             
             <condition name = "status" value = "good">
-                <li value="1">Good to hear you feeling good. Why are you feeling good?</li>
-                <li value="2">Ofcourse, you are happy about that!<srai>MOTIVATIONAL QUOTE</srai> Can I make you're day even better by playing a game?</li>
+            <think>
+                <set name="line1">Good to hear you feeling good. Why are you feeling good?</set>
+                <set name="line2">Ofcourse, you are happy about that!<srai>MOTIVATIONAL QUOTE</srai> Can I make you're day even better by playing a game?</set>
+            </think>
             </condition>
         </template>
     </category>
