@@ -389,7 +389,7 @@
         <pattern>YES</pattern>
         <that>* LEARN SOMETHING</that>
         <template>
-      !komt nog! <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
+        <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
         </template>
     </category>
     # verwijst naar Other_Conversations
@@ -397,7 +397,7 @@
    <category>
         <pattern>LEARN</pattern>
         <template>
-        !komt nog! <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
+        <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
         </template>
     </category>
     # verwijst naar Other_Conversations
@@ -405,11 +405,11 @@
  <category>
         <pattern>LEARN SOMETHING</pattern>
         <template>
-        !komt nog! <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
+        <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
         </template>
     </category>
     # verwijst naar Other_Conversations
-   
+    
    
 #thought game:
 
@@ -633,6 +633,20 @@
     </category>
     
     <category>
+        <pattern>I DO</pattern>
+        <template>
+            <srai>YES</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>SURE</pattern>
+        <template>
+            <srai>YES</srai>
+        </template>
+    </category>
+    
+    <category>
         <pattern>YES *</pattern>
         <template>
             <srai>YES</srai>
@@ -706,6 +720,13 @@
         <pattern>WHAT ARE YOU</pattern>
         <template>
             I'm a bot, silly!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHO ARE YOU</pattern>
+        <template>
+          Don't you know, I'm your BFF (Bot Friend Forever)! If you want to know what I can do, just ask me. :)
         </template>
     </category>
     
@@ -1013,7 +1034,7 @@
         <pattern>RANDOM SUGGESTIONS</pattern>
         <template>
         <random>
-            <li>Well, let's just chat a bit more. Do you prefer to talk about "movies", "music" or "sport"?</li>
+            <li>Well, let's just chat a bit more. Do you prefer to talk about "movies" or "music"?</li>
             <li>By the way <get name="name"></get>, do you want to hear a good joke?</li>
             <li><condition name="feeling">
                <li value="good"><srai>RANDOM SUGGESTIONS</srai></li>
