@@ -3,11 +3,11 @@ import nltk
 from nltk.corpus import stopwords
 stop = stopwords.words('english')
 
+# Example of user input
+string = """ Hey! My name is Ellen. I am 22 years old. 
+You can reach met at ellenbogaards@gmail.com, please send me an email if you want to contact me!"""
 
-string = """
-Hey! My name is Ellen. I am 22 years old. 
-You can reach met at ellenbogaards@gmail.com, please send me an email if you want to contact me!
-"""
+# string = input("Enter your message >> ")
 
 def extract_age(string):
     r = re.compile(r'\d{1,3}')
