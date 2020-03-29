@@ -23,7 +23,7 @@
         <that>* * IS YOUR NAME</that>
         <template>
         <think><set name="name"><star/></set></think>
-        <srai>HELLO</srai>
+        <srai>AGE</srai>
         </template>
     </category>
     
@@ -40,6 +40,23 @@
         Oh, sorry I had that wrong. Then what is your name?
         </template>
     </category>
+
+<category>
+        <pattern>AGE</pattern>
+        <template>
+       Ok! To get a better idea of what things you may like, I would like to know how old you are. So, could you please tell me your age?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>* * YOUR AGE</that>
+        <template>
+        <think><set name="age"><star/></set></think>
+        Ok then. <srai>BEGINNING QUESTIONS</srai>
+        </template>
+    </category>
+
 
     <category>
         <pattern>HI</pattern>
@@ -1015,8 +1032,15 @@
         <pattern>*</pattern>
         <that>* * </that>
         <template>
+        <srai>BEGINNING QUESTIONS</srai>
+        </template>
+    </category>
+        
+        <category>
+        <pattern>BEGINNING QUESTIONS</pattern>
+        <template>
         <condition name="age">
-        <li value="">Age?</li>
+        <li value=""><srai>AGE</srai></li>
         <li><condition name="feeling">
             <li value="">Hi <get name="name"></get>! How are you doing today? "Feeling good" or "not so good"?</li>
             <li><srai>RANDOM SUGGESTIONS</srai> </li>
@@ -1024,7 +1048,6 @@
         </condition>
         </template>
     </category>
-        
 
 
 </aiml>
