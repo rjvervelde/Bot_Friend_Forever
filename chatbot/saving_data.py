@@ -9,6 +9,7 @@ You can reach met at ellenbogaards@gmail.com, please send me an email if you wan
 
 # string = input("Enter your message >> ")
 
+
 # a number between 1 and 100 will be seen as the 'age'
 def extract_age(string):
     r = re.compile(r'\d{1,3}')
@@ -52,13 +53,13 @@ def extract_names(document):
                     names.append(' '.join([c[0] for c in chunk]))
     return names
 
-
 if __name__ == '__main__':
     age = extract_age(string)
     emails = extract_email_addresses(string)
     names = extract_names(string)
     gender = extract_gender(string)
-    print("The name of the user is", names[0])
-    print("The user is",age[0],"years old")
-    print("The e-mailadres of the user is", emails[0])
-    print("The gender of the user is", gender)
+    information = """
+    The name of the user is {}. The user is {} years old. 
+    The gender of the user is {}. 
+    The e-mailadres of the user is {}.""".format(names[0], age[0],emails[0],gender)
+    print(information)
