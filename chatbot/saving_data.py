@@ -62,4 +62,7 @@ if __name__ == '__main__':
     The name of the user is {}. The user is {} years old. 
     The gender of the user is {}. 
     The e-mailadres of the user is {}.""".format(names[0], age[0],emails[0],gender)
-    print(information)
+    # print(information)
+    text_file = open("chatbot_data_user.txt", "w")
+    n = text_file.write(information)
+    text_file.close()
