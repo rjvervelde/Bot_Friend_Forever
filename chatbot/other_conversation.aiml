@@ -2,13 +2,6 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>HELLO</pattern>
-        <template>
-            Well, hello!
-        </template>
-    </category>
-
-    <category>
         <pattern>I WOULD LIKE TO LEARN SOMETHING</pattern>
         <template>
             Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
