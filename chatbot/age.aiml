@@ -66,7 +66,6 @@
         </template>
     </category>
 
-
     <category>
         <pattern>HAPPY</pattern>
         <that>* BY KATY PERRY</that>
@@ -115,7 +114,6 @@
         </template>
     </category>
 
-
     <category>
         <pattern>MICKEY MOUSE</pattern>
         <that>* VAIANA OR ELSA</that>
@@ -130,7 +128,223 @@
         <pattern>SCIENCE</pattern>
         <that>* I CAN TALK ABOUT ALL SORTS OF THINGS *</that>
         <template>
-            The world is so full of interesting things! 
+            The world is so full of interesting things! Do you want to learn something about space, nature or history? 
+        </template>
+    </category>
+
+    <category>
+        <pattern>SPACE</pattern>
+        <that>THE WORLD IS FULL OF INTERESTING THINGS *</that>
+        <template>
+        <random>
+            <li> space is so cool! Do you want to know something about the moonlanding?</li>
+            <li> space is so cool! Do you want to know something about the golden disk that was sent into space?</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SPACE2</pattern>
+        <that>AH ALLRIGHT *</that>
+        <template>
+        <random>
+            <li> space is so mysterious! Do you want to know something about colonizing Mars?</li>
+            <li> space is so mysterious! Do you want to learn something about the beginning of the universe?</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* THE MOONLANDING *</that>
+        <template>
+            The moonlanding was a great achievement for humanity. Watch this: https://bit.ly/2yhWwDX
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* SENT INTO SPACE *</that>
+        <template>
+            This mysterious golden disk is ment for aliens! Watch this: https://bit.ly/2UMJ0Q3
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* COLONIZING MARS *</that>
+        <template>
+            The moonlanding was a great achievement for humanity. https://bit.ly/2vX4y4d
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* BEGINNING OF THE UNIVERSE *</that>
+        <template>
+            The moonlanding was a great achievement for humanity. https://bit.ly/33VoYac
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>SPACE IS SO COOL *</that>
+        <template>
+            Ah allright, but
+            <srai>SPACE2</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>SPACE IS SO MYSTERIOUS *</that>
+        <template>
+            Ah allright, but
+            <srai>SPACE</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NATURE</pattern>
+        <that>THE WORLD IS FULL OF INTERESTING THINGS *</that>
+        <template>
+        <random>
+            <li> The world around us is so interesting! Do you want to know something about the dinosaurs?</li>
+            <li> The world around us is so interesting! Do you want to know something about climate change?</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NATURE2</pattern>
+        <that>AH ALLRIGHT *</that>
+        <template>
+        <random>
+            <li> I love nature! Do you want to know something about the history of pets?</li>
+            <li> I love nature! Do you want to learn something about plants?</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* THE DINOSAURS</that>
+        <template>
+            Dinosaurs were the most gigantic and fascinating animals from the past. Watch this: https://bit.ly/2vWfyii
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* CLIMATE CHANGE</that>
+        <template>
+            Climate change is real. Learn here how it works: https://bit.ly/3dFu52K
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* HISTORY OF PETS</that>
+        <template>
+            Do you love your dog or cat? Learn how humans got them in the first place: https://bit.ly/2WPcCyW
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* PLANTS</that>
+        <template>
+            Plants are food, relaxation and oxygen! Without them we couldn't live. Watch this: https://bit.ly/2ULat4F
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>THE WORLD AROUND US IS SO INTERESTING *</that>
+        <template>
+            Ah allright, but...
+            <srai>NATURE2</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>I LOVE NATURE *</that>
+        <template>
+            Ah allright, but...
+            <srai>NATURE</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HISTORY</pattern>
+        <that>THE WORLD IS FULL OF INTERESTING THINGS *</that>
+        <template>
+        <random>
+            <li> A lot has happened in the past... Do you want to know something about the ancient Egypt?</li>
+            <li> A lot has happened in the past...  Do you want to know something about the Roman empire?</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HISTORY2</pattern>
+        <that>AH ALLRIGHT *</that>
+        <template>
+        <random>
+            <li> Everything in the past brought us to this point. Do you want to know something about Napoleon?</li>
+            <li> Everything in the past brought us to this point. Do you want to know something about the Golden Age?</li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* THE ANCIENCT EGYPT</that>
+        <template>
+            Do you know Cleopatra and the pyramids? It was such an interesting place! Watch this: https://bit.ly/2xAdZHu
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* THE ROMAN EMPIRE</that>
+        <template>
+            The Roman empire is still known as one of the greatest in Europe of all time. Watch this: https://bit.ly/3bAjG6R
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* NAPOLEON</that>
+        <template>
+            Napoleon was one of the last emperors of Europe, with quite an interesting story! Watch this: https://bit.ly/2UpuIpG
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* THE GOLDEN AGE</that>
+        <template>
+            The golden age was a game-changer for Europe's economy, but also contained a lot of cruelty... Watch this: https://bit.ly/3dDDkAI
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>EVERYTHING IN THE PAST BROUGHT US TO *</that>
+        <template>
+            Ah allright, but...
+            <srai>HISTORY</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>A LOT HAS HAPPENED IN THE PAST *</that>
+        <template>
+            Ah allright, but...
+            <srai>HISTORY2</srai>
         </template>
     </category>
 
@@ -140,16 +354,32 @@
         <pattern>MOVIES</pattern>
         <that>* I CAN TALK ABOUT ALL SORTS OF THINGS *</that>
         <template>
-            I love music too. What do you like to listen to? Pop music or Disney?
+            I love watching movies! Which movie do you like best: Big Hero 6, Minions or Toy Story? 
         </template>
     </category>
 
 
     <category>
-        <pattern>BAYMAX</pattern>
-        <that>* VAIANA OR ELSA</that>
+        <pattern>BIG HERO 6</pattern>
+        <that>* MINIONS OR TOY STORY</that>
         <template>
-          Baymax is my favorite too!!! You will like this snippet of the movie: http://
+          Baymax is my favorite too!!! You will like this snippet of the movie: https://bit.ly/2WMZ8Uy
+        </template>
+    </category>
+
+    <category>
+        <pattern>MINIONS</pattern>
+        <that>* MINIONS OR TOY STORY</that>
+        <template>
+          The minions are so cute!!! You will like this snippet of the movie: https://bit.ly/2wO4GTY
+        </template>
+    </category>
+
+    <category>
+        <pattern>TOY STORY</pattern>
+        <that>* MINIONS OR TOY STORY</that>
+        <template>
+          Toy story is amazing! You will like this snippet of the movie: https://bit.ly/33R6UhJ
         </template>
     </category>
 </aiml>
