@@ -17,10 +17,139 @@
     </category>
 
     <category>
-        <pattern>I WOULD LIKE TO LEARN SOMETHING</pattern>
+        <pattern>I WOULD LIKE TO TALK ABOUT SOMETHING</pattern>
         <template>
-            Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
+            Nice! I can talk about all sorts of things. Choose: "Science", "Movies", "Music".
         </template>
     </category>
 
+<!---> MUSIC <-->
+
+    <category>
+        <pattern>MUSIC</pattern>
+        <that>* I CAN TALK ABOUT ALL SORTS OF THINGS *</that>
+        <template>
+            I love music too. What do you like to listen to? Pop music or Disney?
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>POP</pattern>
+        <that>* DISNEY OR KIDS MUSIC</that>
+        <template>
+            Yes, pop is so cool!! Which song do you like better: Happy (by pharell williams) or Fireworks (by Katy Perry)?
+        </template>
+    </category>
+
+    <category>
+        <pattern>FIREWORKS</pattern>
+        <that>* BY KATY PERRY</that>
+        <template>
+            I love this song, it's so good! Let's listen to it: http://...  Do you like Katy Perry?
+        </template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>* LIKE KATY PERRY</that>
+        <template>
+            I love her too! Let's check this song out: 
+        </template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>* LIKE KATY PERRY</that>
+        <template>
+            Ah, she can be too much sometimes. Maybe you will like this though: http://
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>HAPPY</pattern>
+        <that>* BY KATY PERRY</that>
+        <template>
+            The song is not only called "happy", it makes me so happy! Let's watch this: http://
+        </template>
+    </category>
+
+    <category>
+        <pattern>DISNEY</pattern>
+        <that>* DISNEY OR KIDS MUSIC</that>
+        <template>
+          I love Disney!! Which Disney character is your favorite between Ariel, Rapunzel, Mickey Mouse, Vaiana or Elsa?
+        </template>
+    </category>
+
+    <category>
+        <pattern>ARIEL</pattern>
+        <that>* VAIANA OR ELSA</that>
+        <template>
+          Ariel is so cute.. You must love this song:http://
+        </template>
+    </category>
+
+    <category>
+        <pattern>RAPUNZEL</pattern>
+        <that>* VAIANA OR ELSA</that>
+        <template>
+          Rapunzel is so cool in the movie Tangled! You must love this song: http://
+        </template>
+    </category>
+
+    <category>
+        <pattern>VAIANA</pattern>
+        <that>* VAIANA OR ELSA</that>
+        <template>
+          Vaiana is so cool! You must love this song: http://
+        </template>
+    </category>
+
+    <category>
+        <pattern>ELSA</pattern>
+        <that>* VAIANA OR ELSA</that>
+        <template>
+          Elsa is so nice. You must love this song: http://
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>MICKEY MOUSE</pattern>
+        <that>* VAIANA OR ELSA</that>
+        <template>
+          Mickey Mouse is one of the oldest, and best! You must love this song: http://
+        </template>
+    </category>
+
+<!---> SCIENCE <-->
+
+    <category>
+        <pattern>SCIENCE</pattern>
+        <that>* I CAN TALK ABOUT ALL SORTS OF THINGS *</that>
+        <template>
+            The world is so full of interesting things! 
+        </template>
+    </category>
+
+<!---> MOVIES <-->
+
+    <category>
+        <pattern>MOVIES</pattern>
+        <that>* I CAN TALK ABOUT ALL SORTS OF THINGS *</that>
+        <template>
+            I love music too. What do you like to listen to? Pop music or Disney?
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>BAYMAX</pattern>
+        <that>* VAIANA OR ELSA</that>
+        <template>
+          Baymax is my favorite too!!! You will like this snippet of the movie: http://
+        </template>
+    </category>
 </aiml>

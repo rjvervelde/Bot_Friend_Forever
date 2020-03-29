@@ -48,6 +48,7 @@
 
     <category>
         <pattern>JAZZ</pattern>
+        <that>* POP OR ROCK</that>
         <template>
             Jazz is so groovy! Are you team Frank Sinatra or Ella Fitzgerald??
         </template>
