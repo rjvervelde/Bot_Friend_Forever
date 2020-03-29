@@ -9,15 +9,19 @@ You can reach met at ellenbogaards@gmail.com, please send me an email if you wan
 
 # string = input("Enter your message >> ")
 
+# a number between 1 and 100 will be seen as the 'age'
 def extract_age(string):
     r = re.compile(r'\d{1,3}')
     ages = r.findall(string)
     return [re.sub(r'\D', '', age) for age in ages]
 
+# format of emailadresses is recognised
 def extract_email_addresses(string):
     r = re.compile(r'[\w\.-]+@[\w\.-]+')
     return r.findall(string)
 
+# not really good contruction for gender,
+# but if these words are in the string it will be recognised as the gender
 def extract_gender(string):
     f = ['female', 'woman', 'girl', 'lady', 'mrs', 'ms']
     m = ['male', 'man', 'boy', 'sir', 'mr']
@@ -30,6 +34,7 @@ def extract_gender(string):
             gender = 'female'
     return gender
 
+# names will be recognised with NLTK
 def ie_preprocess(document):
     document = ' '.join([i for i in document.split() if i not in stop])
     sentences = nltk.sent_tokenize(document)
