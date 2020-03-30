@@ -57,7 +57,6 @@
         </template>
     </category>
 
-
     <category>
         <pattern>HI</pattern>
         <template>
@@ -93,7 +92,6 @@
         </template>
     </category>
 
-# nog meer activities toevoegen
  <category>
         <pattern>ACTIVITIES</pattern>
         <template>
@@ -103,8 +101,14 @@
                 <random><li>dog</li><li>cat</li><li>hamster</li></random>
                 for a walk</li>
             <li>Sing a song to your teddy bear (he won’t judge you)</li>
+            <li>Why don't you try a new workout: https://www.fitnessblender.com/videos</li>
+            <li>If you like to do something creative, here are many ideas: https://craftsbyamanda.com/</li>
             <li>Maybe I can teach you some cool things. Do you want to learn something?</li>
             <li>Do you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
+            <li>Go through a newspaper and draw funny hair, moustaches and other things on all the photos.</li>
+            <li>Take some time making your own list on a nice piece of paper of things you like to do or want to do. 
+                That way you have something to do now AND later. :)</li>
+            <li>It can be be interesting to write down a story about the last dream you remember you had.</li>
             </random>
         </template>
     </category>
@@ -340,6 +344,9 @@
         <li>it makes me very happy to talk to you today, <get name="name"></get>!</li>
         <li>it is great to have a friend like you!</li>
         <li>I hope someone told you today how amazing you are. If not: You are amazing! :D</li>
+        <li>you make me want to be the best version of myself. (Let's hope I will be updated soon. :P)</li>
+        <li>simply knowing you has made me a better bot.</li>
+        <li>you’re the most perfect ‘you’ there is.</li>
         </random>
         </template>
     </category> 
@@ -376,10 +383,11 @@
     <category>
         <pattern>PUZZLE</pattern>
         <template> 
+        Nice to hear you like puzzles as much as I do!
         <random>
-        <li>link to puzzle</li>
-        <li>link to puzzle</li>
-        <li>link to puzzle</li>
+        <li>Here you can play sudokus: https://sudoku.com/</li>
+        <li>Here you can play crossword puzzles: https://www.boatloadpuzzles.com/playcrossword</li>
+        <li>Did you ever try a calcudoku? You can solve one here: https://www.calcudoku.org/</li>
         </random>
         </template>
     </category>
@@ -719,7 +727,7 @@
     <category>
         <pattern>WHAT ARE YOU</pattern>
         <template>
-            I'm a bot, silly!
+            I'm a chatbot! But I prefer to see myself as a who and not a what. :)
         </template>
     </category>
     
@@ -912,7 +920,7 @@
    <category>
       <pattern>WOW</pattern>
       <template>
-      You are easily amazed. :) <srai>RANDOM SUGGESTIONS</srai>
+      You are easily impressed. :) <srai>RANDOM SUGGESTIONS</srai>
       </template>
    </category>
    
@@ -1015,8 +1023,8 @@
       <template>
       <random>
       <li>So... I just wanted to tell you, <srai>COMPLIMENT</srai></li>
-      <li>If you want to know what else I can do, please just ask me.</li>
-      <li>Did you know: you can try to greet me in a different language</li>
+      <li>Ok then. If you want to know what else I can do, please just ask me.</li>
+      <li>Ok then. Did you know: you can try to greet me in a different language</li>
       <li>When the road looks rough ahead, and you're miles and miles from your nice warm bed ...</li>
       </random>
       </template>
