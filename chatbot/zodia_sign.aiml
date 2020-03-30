@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>WHAT IS MY HOROSCOOP</pattern>
+        <template>
+            <condition name="zodiac">
+            <li value="">What is your zodiac sign?</li>
+            <li value="aquarius"><srai>AQUARIUS</srai></li>
+            <li value="pisces"><srai>PISCES</srai></li>
+            <li value="aries"><srai>ARIES</srai></li>
+            <li value="taurus"><srai>TAURUS</srai></li>
+            <li value="gemini"><srai>GEMINI</srai></li>
+            <li value="cancer"><srai>CANCER</srai></li>
+            <li value="leo"><srai>LEO</srai></li>
+            <li value="virgo"><srai>VIRGO</srai></li>
+            <li value="libra"><srai>LIBRA</srai></li>
+            <li value="scorpio"><srai>SCORPIO</srai></li>
+            <li value="sagittarius"><srai>SAGITTARIUS</srai></li>
+            <li value="capricorn"><srai>CAPRICORN</srai></li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>MY ZODIAC SIGN IS *</pattern>
+        <think><set name="zodiac"><star/></set></think>
+        <template>
+            <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>AQUARIUS</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PISCES</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ARIES</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TAURUS</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>GEMINI</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CANCER</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LEO</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>VIRGO</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIBRA</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SCORPIO</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SAGITTARIUS</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CAPRICORN</pattern>
+        <template>
+        <srai>RANDOM HOROSCOOP</srai>
+        </template>
+    </category>
+
+<!---> This horoscope is inspired by https://github.com/pandorabots/Free-AIML/blob/master/horoscope.aiml,
+written by  pandorabots-admin. <-->
+
+    <category>
+    <pattern>RANDOM HOROSCOPE</pattern>
+    <template>
+    Your horoscope for <date format="%x"/><br/><br/>
+        <random>
+            <li>Today, will be interesting as</li>
+            <li>If you have money worries then it's good news as</li>
+            <li>If you are single, great news when</li>
+            <li>The stars align in your sign over the next few days and</li>
+        </random>
+        <random>
+            <li>Jupiter and Venus</li>
+            <li>Mars and Capricorn</li>
+            <li>the Sun along with Mercury</li>
+            <li>three different planets</li>
+        </random>
+        <random>
+            <li>enter your sign.</li>
+            <li>align in Pisces.</li>
+            <li>are visible near Neptune.</li>
+            <li>come together.</li>
+        </random>
+        <random>
+            <li>This will mean</li>
+            <li>A rare event such as this will ensure that</li>
+            <li>Spend your day wisely as</li>
+            <li>Everything goes right for you,</li>
+        </random>
+        <random>
+            <li>fortune smiles on you and</li>
+            <li>Lady Luck is on your side and</li>
+            <li>love is not far away and</li>
+            <li>this will be a great day and</li>
+        </random>
+        <random>
+            <li>you will not put a foot wrong.</li>
+            <li>someone you have a crush on feels the same way.</li>
+            <li>a possible Lottery win is in the stars.</li>
+            <li>you re-discover an old heirloom.</li>
+        </random>
+        <random>
+            <li>However,</li>
+            <li>Good luck may not last though,</li>
+            <li>It's not all good news, </li>
+            <li>Be careful though,</li>
+        </random>
+        <random>
+            <li>Saturn is not far away from Venus so</li>
+            <li>the Moon soon moves through Aries and</li>
+            <li>Neptune's alignment with Pluto means</li>
+            <li>not all the planets are happy and</li>
+        </random>
+        <random>
+            <li>things may not go according to plan.</li>
+            <li>a jealous colleague is watching you closely.</li>
+            <li>something you did last week will come back to haunt you.</li>
+            <li>you will lose a valuable object.</li>
+        </random>
+        <random>
+            <li>So, in summary,</li>
+            <li>Overall,</li>
+            <li>After all,</li>
+            <li>Taking everything into account,</li>
+        </random>
+        <random>
+            <li>the planets can be fickle but are rising in Libra so</li>
+            <li>Mars is an angry planet but is weak as Scorpio rises in the East so</li>
+            <li>keep a close eye on those around you but</li>
+            <li>you know your own mind very well so</li>
+        </random>
+        <random>
+            <li>enjoy your day.</li>
+            <li>make time for yourself today.</li>
+            <li>let today be a fun day for you.</li>
+            <li>forget the bad things and look forward to a great day.</li>
+        </random>
+    </template>
+    </category>
+
+</aiml>
