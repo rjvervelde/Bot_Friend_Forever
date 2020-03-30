@@ -88,7 +88,7 @@
         Hm, let's think of somthing to do then!
         <random>
         <li><srai>ACTIVITIES</srai></li>
-        <li>Let's just chat a bit. Do you prefer to talk about "movies", "music" or "sport"?</li>
+        <li>Let's just chat a bit. Do you prefer to talk about "movies" or "music"?</li>
         </random>  
         </template>
     </category>
@@ -971,7 +971,7 @@
       <category>
       <pattern>WHAT CAN YOU DO</pattern>
       <template>
-      There are so many options! I can find you a game or puzzle, we can talk about music, sport or movies, maybe you want to learn something, or shall I just tell you a joke? I only need one word to know what you want. :D
+      There are so many options! I can find you a game, we can talk about how you are feeling or chat some about music or movies, maybe you want to learn something, or shall I just tell you a joke? I only need one word to know what you want. :D
       </template>
    </category>
    
