@@ -12,7 +12,7 @@
     <category>
         <pattern>HOW LONG TILL IT IS MY BIRTHDAY</pattern>
         <template>
-            Since you were born on, <get name="birthday"></get>, your birhtday will be in x days.
+            Since you were born on, <get name="birthday"></get>, your birhtday will be in <get name="how_many_days"></get> days.
         </template>
     </category>
 

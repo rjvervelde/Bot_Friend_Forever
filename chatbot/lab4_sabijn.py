@@ -6,6 +6,7 @@ def set_parameters():
     kernel.setPredicate("status", "neutral")
     kernel.setPredicate("birthday", "infinity!!!!")
     kernel.setPredicate("age", "undefined")
+    kernel.setPredicate("how_many_days", "it is always youre birthday")
     return
 
 def birthday(born):
@@ -31,6 +32,8 @@ def birthday(born):
 
     return f"{diff}", classs
 
+def calculate_until_birthday(user_message)
+
 def extract_information(user_message):
     if kernel.getPredicate("status"):
         sentiment = sentiment_of_text(user_message)
@@ -45,6 +48,11 @@ def extract_information(user_message):
             kernel.setPredicate("birthday", birthday(user_message)[0])
             kernel.setPredicate("age", birthday(user_message)[1])
             break
+    
+    if user_message.lower() == "how long till it is my birthday":
+
+
+        
     return
 
 # Create the kernel and learn AIML files
