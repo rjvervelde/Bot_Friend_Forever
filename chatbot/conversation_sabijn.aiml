@@ -4,23 +4,29 @@
     <category>
         <pattern>*</pattern>
         <template>
-            Hi! How are you doing? 
+            Hi! How are you today?
         </template>
     </category>
     
     <category>
-        <pattern>I AM DOING *</pattern>
+        <pattern>*</pattern>
+        <that>* * YOU TODAY</that>
         <template>
             <condition name = "status" value = "not so good">
-                That sucks, how are you feeling exactly? 
+                That sucks, how are you feeling exactly? Are you "bored", "angry" or "sad"?
             </condition>
             
             <condition name = "status" value = "good">
-            <think>
-                <set name="line1">Good to hear you feeling good. Why are you feeling good?</set>
-                <set name="line2">Ofcourse, you are happy about that!<srai>MOTIVATIONAL QUOTE</srai> Can I make you're day even better by playing a game?</set>
-            </think>
+                Good to hear you feeling good. Why are you feeling good?
             </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>* * FEELING GOOD</that>
+        <template>
+            Ofcourse, you are happy about that! <srai>MOTIVATIONAL QUOTE</srai>. Can I make you're day even better by playing a game?
         </template>
     </category>
 
@@ -37,7 +43,7 @@
     </category> 
 
      <category>
-        <pattern># BORED #</pattern>
+        <pattern>* BORED</pattern>
         <template>
         <think><set name="feeling">bored</set></think>
         <random>
@@ -71,7 +77,7 @@
     </category>
 
 <category>
-        <pattern>ANGRY</pattern>
+        <pattern>* ANGRY</pattern>
         <template>
         <think><set name="feeling">angry</set></think>
         Why are you upset?</template>
@@ -502,7 +508,5 @@
        <srai>RANDOM SUGGESTIONS</srai> 
         </template>
     </category>
-        
-
-
+    
 </aiml>

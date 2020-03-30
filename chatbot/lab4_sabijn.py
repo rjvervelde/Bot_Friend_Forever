@@ -21,15 +21,16 @@ def birthday(born):
     return f"{diff}", classs
 
 def extract_information(user_message):
-    if kernel.getPredicate("status") == "neutral":
+    if kernel.getPredicate("status"):
         sentiment = sentiment_of_text(user_message)
-        
         if sentiment < 0:
+            
             kernel.setPredicate("status", "not so good")
         else:
             kernel.setPredicate("status", "good")
     
-    # if kernel.getPredicate("birthday") == "undefined":
+    # if kernel.getPredicate("birthday"):
+        
     #     kernel.setPredicate("birthday", birthday(user_message)[0])
     #     kernel.setPredicate("age", birthday(user_message)[1])
         
