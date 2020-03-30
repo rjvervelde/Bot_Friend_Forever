@@ -44,7 +44,7 @@
 <category>
         <pattern>AGE</pattern>
         <template>
-       Ok! To get a better idea of what things you may like, I would like to know how old you are. So, could you please tell me your age?
+       Ok! To get a better idea of what things you may like, I would like to know how old you are. So, when were you born?
         </template>
     </category>
     

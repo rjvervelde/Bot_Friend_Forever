@@ -32,7 +32,7 @@ def birthday(born):
 
     return f"{diff}", classs
 
-def calculate_until_birthday(user_message)
+# def calculate_until_birthday(user_message)
 
 def extract_information(user_message):
     if kernel.getPredicate("status"):
@@ -49,10 +49,10 @@ def extract_information(user_message):
             kernel.setPredicate("age", birthday(user_message)[1])
             break
     
-    if user_message.lower() == "how long till it is my birthday":
+    # if user_message.lower() == "how long till it is my birthday":
+    #     calculate_until_birthday(user_message)
+    #     kernel.setPredicate()
 
-
-        
     return
 
 # Create the kernel and learn AIML files
@@ -68,11 +68,11 @@ while True:
     
     if message == "quit":
         break #useful in notebook
-        # exit() # useful in actual application
-    elif message == "save":
-        kernel.saveBrain("bot_brain.brn")
     else:
         extract_information(message)
         bot_response = kernel.respond(message)
         
         print(bot_response)
+
+naam = kernel.getPredicate("name")
+print(naam)
