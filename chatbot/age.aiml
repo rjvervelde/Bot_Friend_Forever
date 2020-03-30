@@ -5,7 +5,7 @@
         <pattern>I WAS BORN ON *</pattern>
         <think><set name="birthday"><star/></set></think>
         <template>
-            Allright, you were born on <get name="birthday"></get>? I was born on March 23rd 2020!
+            Allright, so you are <get name="birthday"></get>? You are old, I am only a few days :)
         </template>
     </category>
 
@@ -16,6 +16,7 @@
         </template>
     </category>
 
+<!---> Thinks to talk about <-->
     <category>
         <pattern>I WOULD LIKE TO TALK ABOUT SOMETHING</pattern>
         <template>

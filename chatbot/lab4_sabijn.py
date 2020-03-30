@@ -1,18 +1,29 @@
 import aiml
 from sentiment_fancy import sentiment_of_text
+from datetime import date
 
 def set_parameters():
     kernel.setPredicate("status", "neutral")
-    kernel.setPredicate("birthday", "undefined")
+    kernel.setPredicate("birthday", "infinity!!!!")
     kernel.setPredicate("age", "undefined")
     return
 
 def birthday(born):
-    list_string = born.split()
-    year = int(list_string[-1])
-    month = list_string[-2]
-    day = list_string[-3]
-    diff = 2020 - year
+    today = date.today()
+    d = today.strftime("%d/%m/%Y")
+    current_day, current_month, current_year = d.split("/")
+    birth_day, birth_month, birth_year = born.split()[-1].split('-')
+    
+    if int(birth_month) < int(current_month):
+        diff = int(current_year) - int(birth_year)
+    elif birth_month == current_month:
+        if int(birth_day) < int(current_day):
+            diff = current_year - birth_year
+        else:
+            diff = current_year - birth_year - 1
+    else:
+        diff = current_year - birth_year - 1
+
     if diff < 16:
         classs = "0"
     else:
@@ -29,11 +40,11 @@ def extract_information(user_message):
         else:
             kernel.setPredicate("status", "good")
     
-    # if kernel.getPredicate("birthday"):
-        
-    #     kernel.setPredicate("birthday", birthday(user_message)[0])
-    #     kernel.setPredicate("age", birthday(user_message)[1])
-        
+    for element in user_message:
+        if element == '-':
+            kernel.setPredicate("birthday", birthday(user_message)[0])
+            kernel.setPredicate("age", birthday(user_message)[1])
+            break
     return
 
 # Create the kernel and learn AIML files
