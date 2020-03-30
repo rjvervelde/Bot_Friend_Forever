@@ -9,7 +9,6 @@ stop = stopwords.words('english')
 
 string = input("Enter your message >> ")
 
-
 # a number between 1 and 100 will be seen as the 'age'
 def extract_age(string):
     r = re.compile(r'\d{1,3}')
