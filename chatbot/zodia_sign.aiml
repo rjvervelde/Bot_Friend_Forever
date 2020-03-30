@@ -4,21 +4,7 @@
     <category>
         <pattern>WHAT IS MY HOROSCOOP</pattern>
         <template>
-            <condition name="zodiac">
-            <li value="">What is your zodiac sign?</li>
-            <li value="aquarius"><srai>AQUARIUS</srai></li>
-            <li value="pisces"><srai>PISCES</srai></li>
-            <li value="aries"><srai>ARIES</srai></li>
-            <li value="taurus"><srai>TAURUS</srai></li>
-            <li value="gemini"><srai>GEMINI</srai></li>
-            <li value="cancer"><srai>CANCER</srai></li>
-            <li value="leo"><srai>LEO</srai></li>
-            <li value="virgo"><srai>VIRGO</srai></li>
-            <li value="libra"><srai>LIBRA</srai></li>
-            <li value="scorpio"><srai>SCORPIO</srai></li>
-            <li value="sagittarius"><srai>SAGITTARIUS</srai></li>
-            <li value="capricorn"><srai>CAPRICORN</srai></li>
-            </condition>
+            <srai>RANDOM HOROSCOOP</srai>
         </template>
     </category>
 
