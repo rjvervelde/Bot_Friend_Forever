@@ -3,14 +3,14 @@
 
     <category>
         <pattern>I WAS BORN ON *</pattern>
-        <think><set name="birthday"><star/></set></think>
+        <!-- <think><set name="age"><star/></set></think> -->
         <template>
-            Allright, so you are <get name="birthday"></get>? You are old, I am only a few days :)
+            Allright, so you are <get name="age"></get>? You are old, I am only a few days :)
         </template>
     </category>
 
     <category>
-        <pattern>HOW LONG TILL IT IS MY BIRTHDAY</pattern>
+        <pattern>* BIRTHDAY</pattern>
         <template>
             Since you were born on, <get name="birthday"></get>, your birhtday will be in <get name="how_many_days"></get> days.
         </template>
