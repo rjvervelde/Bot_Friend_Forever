@@ -11,6 +11,7 @@
         <!-- Template is the response to the pattern -->
         <!-- This learn an aiml file -->
         <template>
+            <learn>basic_chat.aiml</learn>
             <learn>conversation_sabijn.aiml</learn>
             <learn>other_conversation.aiml</learn>
             <learn>age.aiml</learn>
