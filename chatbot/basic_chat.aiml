@@ -460,51 +460,51 @@
         <pattern>YES</pattern>
         <that>LETS PLAY A GAME *</that>
         <template>
-        <think>
-        <random>
-        <li><set name="thoughtgame">grapefruit</set></li>
-        <li><set name="thoughtgame">cherry</set></li>
-        <li><set name="thoughtgame">pear</set></li>
-        </random>
-        </think>
-          Category: fruit. 8 guesses left. Type "stop game" if you want to stop playing. Make your first guess
+            <think>
+            <random>
+            <li><set name="thoughtgame">grapefruit</set></li>
+            <li><set name="thoughtgame">cherry</set></li>
+            <li><set name="thoughtgame">pear</set></li>
+            </random>
+            </think>
+            Category: fruit. 8 guesses left. Type "stop game" if you want to stop playing. Make your first guess
         </template>
     </category>
 
- <category>
-        <pattern>CHECK FOR ANSWER *</pattern>
-        <template>
-<think><set name="guess"><star/></set></think>
-        <condition name="thoughtgame">
-<li value="grapefruit">
-                <condition name="guess">
-                <li value="grapefruit">Correct! I was thinking about <get name="thoughtgame"></get>
-                <think><set name="WrongOrRight">right</set></think></li>
-                <li><think><set name="WrongOrRight">wrong</set></think></li>
+        <category>
+            <pattern>CHECK FOR ANSWER *</pattern>
+            <template>
+                <think><set name="guess"><star/></set></think>
+                <condition name="thoughtgame">
+                        <li value="grapefruit">
+                        <condition name="guess">
+                        <li value="grapefruit">Correct! I was thinking about <get name="thoughtgame"></get>
+                        <think><set name="WrongOrRight">right</set></think></li>
+                        <li><think><set name="WrongOrRight">wrong</set></think></li>
+                        </condition>
+                        </li>
+                        <li value="cherry">
+                        <condition name="guess">
+                        <li value="cherry">Correct! I was thinking about <get name="thoughtgame"></get>
+                        <think><set name="WrongOrRight">right</set></think></li>
+                        <li><think><set name="WrongOrRight">wrong</set></think></li>
+                        </condition>
+                        </li>
+                        <li value="pear">
+                        <condition name="guess">
+                        <li value="mango">Correct! I was thinking about <get name="thoughtgame"></get>
+                        <think><set name="WrongOrRight">right</set></think></li>
+                        <li><think><set name="WrongOrRight">wrong</set></think></li>
+                        </condition>
+                        </li>
+                        <li value="">Sorry, something went wrong</li>
                 </condition>
-</li>
-<li value="cherry">
-                <condition name="guess">
-                <li value="cherry">Correct! I was thinking about <get name="thoughtgame"></get>
-                <think><set name="WrongOrRight">right</set></think></li>
-                <li><think><set name="WrongOrRight">wrong</set></think></li>
-                </condition>
-</li>
-<li value="pear">
-                <condition name="guess">
-                <li value="mango">Correct! I was thinking about <get name="thoughtgame"></get>
-                <think><set name="WrongOrRight">right</set></think></li>
-                <li><think><set name="WrongOrRight">wrong</set></think></li>
-                </condition>
-</li>
-<li value="">Sorry, something went wrong</li>
-</condition>
-        </template>
-    </category>
+            </template>
+            </category>
 
-<category>
+    <category>
         <pattern>*</pattern>
-     <that>* * YOUR FIRST GUESS</that>
+        <that>* * YOUR FIRST GUESS</that>
         <template>
           <srai>CHECK FOR ANSWER <star/></srai>
           <condition name="WrongOrRight">
@@ -513,9 +513,9 @@
         </template>
     </category>
     
-<category>
+    <category>
         <pattern>*</pattern>
-     <that>* * MAKE YOUR SECOND GUESS</that>
+        <that>* * MAKE YOUR SECOND GUESS</that>
         <template>
         <srai>CHECK FOR ANSWER <star/></srai>
           <condition name="WrongOrRight">
@@ -525,9 +525,9 @@
         </template>
     </category>
     
-<category>
+    <category>
         <pattern>*</pattern>
-     <that>* * MAKE YOUR THIRD GUESS</that>
+        <that>* * MAKE YOUR THIRD GUESS</that>
         <template>
         <srai>CHECK FOR ANSWER <star/></srai>
           <condition name="WrongOrRight">
@@ -551,18 +551,17 @@
 
    <category>
         <pattern>*</pattern>
-     <that>* * MAKE YOUR FIFTH GUESS</that>
+        <that>* * MAKE YOUR FIFTH GUESS</that>
         <template>
         <srai>CHECK FOR ANSWER <star/></srai>
-          <condition name="WrongOrRight">
+            <condition name="WrongOrRight">
                 <li value="wrong">
                  It's not <star/>. <srai>THOUGHTGAME HINT 3</srai> You can make your sixth guess.</li>
-                </condition>
+            </condition>
         </template>
     </category>
 
-
-<category>
+    <category>
         <pattern>*</pattern>
      <that>* * MAKE YOUR SIXTH GUESS</that>
         <template>
@@ -591,11 +590,11 @@
     <category>
         <pattern>THOUGHTGAME HINT 1</pattern>
         <template>
-<condition name="thoughtgame">
+            <condition name="thoughtgame">
                 <li value="grapefruit">Hint: It's round.</li>
                 <li value="cherry">Hint: It's round.</li>
                 <li value="pear">Hint: it's green.</li>
-                </condition>
+            </condition>
         </template>
     </category>
     
@@ -1070,7 +1069,7 @@
         <pattern>RANDOM SUGGESTIONS</pattern>
         <template>
         <random>
-            <li>Well, let's just chat a bit more. Do you prefer to talk about "movies" or "music"?</li>
+            <li><srai>I WOULD LIKE TO TALK ABOUT SOMETHING<srai></li>
             <li>By the way <get name="name"></get>, do you want to hear a good joke?</li>
             <li><condition name="feeling">
                <li value="good"><srai>RANDOM SUGGESTIONS</srai></li>

@@ -2,7 +2,14 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>I WOULD LIKE TO LEARN SOMETHING</pattern>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WOULD LIKE TO TALK ABOUT SOMETHING</pattern>
         <template>
             Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
         </template>
@@ -24,7 +31,6 @@
 
     <category>
         <pattern>MUSIC</pattern>
-        <that>* LEARNING IS FUEL FOR THE BRAIN *</that>
         <template>
             I love music too. What is your favorite genre from Jazz, Classical Music, Pop or Rock?
         </template>
@@ -66,6 +72,7 @@
 
     <category>
         <pattern>CLASSICAL MUSIC</pattern>
+        <that>* POP OR ROCK</that>
         <template>
             Classical music always gives me the chills. Who is your favorite composer??
         </template>
@@ -123,6 +130,7 @@
 
     <category>
         <pattern>POP</pattern>
+        <that>* POP OR ROCK</that>
         <template>
             YES! Pop is great to listen to, and a real reflexion of society sometimes. What is your favorite era?
         </template>
@@ -182,6 +190,7 @@
 
     <category>
         <pattern>ROCK</pattern>
+        <that>* POP OR ROCK</that>
         <template>
             Rock gives me so many feelings in my robot heart... What is your favorite band?
         </template>
@@ -268,7 +277,6 @@
 
     <category>
         <pattern>SCIENCE</pattern>
-        <that>* LEARNING IS FUEL FOR THE BRAIN *</that>
         <template>
             Science makes the world, great choice!! What is your field of interest? (Choose: Computer Science, Physics, Biology, Psychology, Philosophy)
         </template>
@@ -334,7 +342,6 @@
 
     <category>
         <pattern>MOVIES</pattern>
-        <that>* LEARNING IS FUEL FOR THE BRAIN *</that>
         <template>
         <random>
             <li> Do you know: The Sound of Music?</li>
