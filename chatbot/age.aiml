@@ -2,8 +2,8 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>I WAS BORN ON *</pattern>
-        <!-- <think><set name="age"><star/></set></think> -->
+        <pattern>*</pattern>
+        <that>* * (DD-MM-YYYY)</that>
         <template>
             Allright, so you are <get name="age"></get>? You are old, I am only a few days :)
         </template>

@@ -1088,11 +1088,11 @@
         <pattern>*</pattern>
         <that>* * </that>
         <template>
-        <srai>BEGINNING QUESTIONS</srai>
+        <srai>RANDOM SUGGESTIONS</srai>
         </template>
     </category>
         
-    <category>
+    <!-- <category>
         <pattern>BEGINNING QUESTIONS</pattern>
         <template>
         <condition name="age">
@@ -1103,7 +1103,18 @@
         </condition></li>
         </condition>
         </template>
-    </category>
+    </category> -->
 
+    <category>
+        <pattern>*</pattern>
+        <that>* * A FEW DAYS</that>
+        <template>
+        <condition name="age">
+            <li><condition name="name">
+                <li value="">Hi <get name="name"></get>! How are you today?</li>
+            </condition></li>
+        </condition>
+        </template>
+    </category>
 
 </aiml>
