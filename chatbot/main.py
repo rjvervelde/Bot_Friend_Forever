@@ -22,11 +22,11 @@ def birthday(born):
         diff = int(current_year) - int(birth_year)
     elif birth_month == current_month:
         if int(birth_day) < int(current_day):
-            diff = current_year - birth_year
+            diff = int(current_year) - int(birth_year)
         else:
-            diff = current_year - birth_year - 1
+            diff = int(current_year) - int(birth_year) - 1
     else:
-        diff = current_year - birth_year - 1
+        diff = int(current_year) - int(birth_year) - 1
 
     if diff < 16:
         classs = "0"
