@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     
-    <category>
+    <!-- <category>
         <pattern>*</pattern>
         <template>
             Hi! How are you today?
         </template>
-    </category>
+    </category> -->
     
     <category>
         <pattern>*</pattern>

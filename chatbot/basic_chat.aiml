@@ -1098,7 +1098,7 @@
         <condition name="age">
         <li value=""><srai>AGE</srai></li>
         <li><condition name="feeling">
-            <li value="">Hi <get name="name"></get>! How are you doing today?</li>
+            <li value="">Hi <get name="name"></get>! How are you today?</li>
             <li><srai>RANDOM SUGGESTIONS</srai> </li>
         </condition></li>
         </condition>
