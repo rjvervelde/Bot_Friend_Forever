@@ -1065,6 +1065,14 @@
       </template>
    </category>
 
+    <category>
+        <pattern>YES</pattern>
+        <that>* HOROSCOPE</that>
+        <template> 
+            <srai>RANDOM HOROSCOOP</srai>>
+        </template>
+    </category> 
+
 <category>
         <pattern>RANDOM SUGGESTIONS</pattern>
         <template>
@@ -1076,6 +1084,7 @@
                <li>Do you want to talk more about how you are feeling?</li>
             </condition></li>
             <li>So <get name="name"></get>, do you want to hear some ideas for activities?</li>
+            <li>Do you want to know your horoscope of today?</li>
             <li>Well, maybe you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
             <li>Now, maybe I can teach you some cool things. Do you want to learn something?</li>
             <li>So... I just wanted to tell you, <srai>compliment</srai></li>
