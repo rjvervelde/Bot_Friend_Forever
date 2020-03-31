@@ -337,7 +337,8 @@
         <pattern>RESPONSE FOR SICK</pattern>
         <template> 
         <random>
-        <li>Here are some advices: link...</li>
+        <li>Here are some advices, like your granny would give you: https://www.littlethings.com/grandmas-common-cold-remedies/
+</li>
         <li>Please take good care of yourself, hopefully taking some rest will quickly make a big difference!</li>
         </random>
         </template>
