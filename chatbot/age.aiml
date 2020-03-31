@@ -18,7 +18,7 @@
 
 <!---> Thinks to talk about <-->
     <category>
-        <pattern>I WOULD LIKE TO TALK ABOUT SOMETHING</pattern>
+        <pattern>KID CONVERSATION</pattern>
         <template>
             Nice! I can talk about all sorts of things. Choose: "Science", "Movies", "Music".
         </template>
