@@ -5,7 +5,11 @@
         <pattern>*</pattern>
         <that>* * YYYY</that>
         <template>
-            Allright, so you are <get name="age"></get>? You are old, I am only a few days :)
+            <li><condition name="age" value="undefined">
+                I didn't get your birthday right. Can you enter it again in the format DD-MM-YYYY?
+            </condition></li>
+
+            <li name="">Allright, so you are <get name="age"></get>? You are old, I am only a few days :)</li>
         </template>
     </category>
 

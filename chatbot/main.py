@@ -12,28 +12,32 @@ def set_parameters():
     return
 
 def birthday(born):
-    today = date.today()
-    d = today.strftime("%d/%m/%Y")
-    current_day, current_month, current_year = d.split("/")
-    birth_day, birth_month, birth_year = born.split()[-1].split('-')
-    kernel.setPredicate("birthday", f"{born.split()[-1]}")
-    
-    if int(birth_month) < int(current_month):
-        diff = int(current_year) - int(birth_year)
-    elif birth_month == current_month:
-        if int(birth_day) < int(current_day):
+    try:
+        today = date.today()
+        d = today.strftime("%d/%m/%Y")
+        current_day, current_month, current_year = d.split("/")
+        birth_day, birth_month, birth_year = born.split()[-1].split('-')
+        kernel.setPredicate("birthday", f"{born.split()[-1]}")
+        
+        if int(birth_month) < int(current_month):
             diff = int(current_year) - int(birth_year)
+        elif birth_month == current_month:
+            if int(birth_day) < int(current_day):
+                diff = int(current_year) - int(birth_year)
+            else:
+                diff = int(current_year) - int(birth_year) - 1
         else:
             diff = int(current_year) - int(birth_year) - 1
-    else:
-        diff = int(current_year) - int(birth_year) - 1
 
-    if diff < 16:
-        classs = "0"
-    else:
-        classs = "1"
+        if diff < 16:
+            classs = "0"
+        else:
+            classs = "1"
 
-    return f"{diff}", classs
+        return f"{diff}", classs
+
+    except:
+        return f"undefined", "undefined"
 
 def calculate_until_birthday():
     birthday = kernel.getPredicate("birthday")
