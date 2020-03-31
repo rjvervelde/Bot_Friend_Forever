@@ -6,7 +6,7 @@
         <template>
             <condition name="age_category">
             <li value="undefined">Ah, before we talk, when were you born?</li>
-            t <li value="0"><srai>KID CONVERSATION</srai></li>
+            <li value="0"><srai>KID CONVERSATION</srai></li>
             <li value="1"><srai>ADULT CONVERSATION</srai></li>
             </condition>
             

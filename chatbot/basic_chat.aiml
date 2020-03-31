@@ -1109,10 +1109,8 @@
         <pattern>*</pattern>
         <that>* * A FEW DAYS</that>
         <template>
-        <condition name="age">
-            <li><condition name="name">
-                <li value="">Hi <get name="name"></get>! How are you today?</li>
-            </condition></li>
+        <condition name="name">
+                <li>Hi <get name="name"></get>! How are you today?</li>
         </condition>
         </template>
     </category>

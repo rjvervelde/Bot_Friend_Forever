@@ -3,7 +3,7 @@
 
     <category>
         <pattern>*</pattern>
-        <that>* * (DD-MM-YYYY)</that>
+        <that>* * YYYY</that>
         <template>
             Allright, so you are <get name="age"></get>? You are old, I am only a few days :)
         </template>
