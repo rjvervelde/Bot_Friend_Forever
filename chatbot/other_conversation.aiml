@@ -18,14 +18,29 @@
      <category>
         <pattern>I WANT TO LEARN SOMETHING</pattern>
         <template>
-        <srai> I WOULD LIKE TO LEARN SOMETHING</srai>
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WOULD LIKE TO LEARN SOMETHING</pattern>
+        <template>
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>I WANT TO LEARN SOMETHING</pattern>
+        <template>
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai>
         </template>
     </category>
 
      <category>
         <pattern>LEARN ME SOMETHING</pattern>
         <template>
-        <srai> I WOULD LIKE TO LEARN SOMETHING</srai>
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai>
         </template>
     </category>
 
