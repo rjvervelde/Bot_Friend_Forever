@@ -425,7 +425,7 @@
         <pattern>YES</pattern>
         <that>* LEARN SOMETHING</that>
         <template>
-        <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai> 
         </template>
     </category>
     # verwijst naar Other_Conversations
@@ -433,7 +433,7 @@
    <category>
         <pattern>LEARN</pattern>
         <template>
-        <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai> 
         </template>
     </category>
     # verwijst naar Other_Conversations
@@ -441,7 +441,7 @@
  <category>
         <pattern>LEARN SOMETHING</pattern>
         <template>
-        <srai>I WOULD LIKE TO LEARN SOMETHING</srai> 
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai> 
         </template>
     </category>
     # verwijst naar Other_Conversations
