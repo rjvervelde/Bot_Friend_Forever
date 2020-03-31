@@ -58,15 +58,6 @@
     </category>
     
     <category>
-        <pattern>*</pattern>
-        <that>* * YOUR AGE</that>
-        <template>
-        <think><set name="age"><star/></set></think>
-        Ok then. <srai>BEGINNING QUESTIONS</srai>
-        </template>
-    </category>
-
-    <category>
         <pattern>HI</pattern>
         <template>
             <srai>HELLO</srai>
