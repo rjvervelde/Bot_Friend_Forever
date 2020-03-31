@@ -17,6 +17,15 @@
         </condition>
         </template>
     </category>
+
+      <category>
+        <pattern>MY NAME IS *</pattern>
+        <that>* * IS YOUR NAME</that>
+        <template>
+        <think><set name="name"><star/></set></think>
+        <srai>AGE</srai>
+        </template>
+    </category>
     
       <category>
         <pattern>*</pattern>
