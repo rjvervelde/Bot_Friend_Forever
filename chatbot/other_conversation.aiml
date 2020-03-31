@@ -45,7 +45,7 @@
     <category>
         <pattern>ADULT CONVERSATION</pattern>
         <template>
-            Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
+            Nice, let's learn something! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
         </template>
     </category>
 
