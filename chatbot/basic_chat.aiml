@@ -44,7 +44,7 @@
 <category>
         <pattern>AGE</pattern>
         <template>
-       Ok! To get a better idea of what things you may like, I would like to know how old you are. So, when were you born?
+       Ok! To get a better idea of what things you may like, I would like to know how old you are. So, when were you born? (DD-MM-YYYY)
         </template>
     </category>
     
@@ -365,6 +365,14 @@
         <srai>GAME</srai>
         </template>
     </category>
+    
+    <category>
+        <pattern>YES</pattern>
+        <that>* PUZZLE</that>
+        <template> 
+        <srai>PUZZLE</srai>
+        </template>
+    </category>
  
     <category>
         <pattern>GAME</pattern>
@@ -379,6 +387,13 @@
     
     
     <category>
+        <pattern>* GAME</pattern>
+        <template> 
+        Do you want me to find you a game to play?
+        </template>
+    </category>
+    
+    <category>
         <pattern>PUZZLE</pattern>
         <template> 
         Nice to hear you like puzzles as much as I do!
@@ -390,6 +405,12 @@
         </template>
     </category>
     
+    <category>
+        <pattern>* PUZZLE</pattern>
+        <template> 
+        Do you want me to find you a nice puzzle?
+        </template>
+    </category>
     
     <category>
         <pattern>YES</pattern>
@@ -872,7 +893,7 @@
    </category> 
    
      <category>
-      <pattern>BONJOUR</pattern>
+      <pattern>SALUT</pattern>
       <template>
          Tu parles Francais?!
       </template>
