@@ -13,7 +13,7 @@
         <template>
         <condition name="name">
         <li value="">Hi, nice to meet you! What is your name?</li>
-        <li>Hi <get name="name"></get>! How are you doing today? "Feeling good" or "not so good"?</li>
+        <li>Hi <get name="name"></get>! How are you today?</li>
         </condition>
         </template>
     </category>
@@ -64,21 +64,21 @@
         </template>
     </category>
     
-    <category>
+    <!-- <category>
         <pattern>FEELING GOOD</pattern>
         <template>
         <think><set name="feeling">good</set></think>
         Great to hear that! 
         <srai>RANDOM SUGGESTIONS</srai>
         </template>
-    </category>
+    </category> -->
     
-    <category>
+    <!-- <category>
         <pattern>NOT SO GOOD</pattern>
         <template>
             What's the matter? Are you "sad", "sick", "bored", "worried" or "angry"?
         </template>
-    </category>
+    </category> -->
     
      <category>
         <pattern>BORED</pattern>
@@ -122,7 +122,7 @@
     </category>
 
 
- <category>
+<category>
         <pattern>*</pattern>
         <that>WHAT IS BOTHERING *</that>
         <template>
@@ -141,7 +141,7 @@
         <pattern>*</pattern>
         <that>WHY ARE YOU UPSET</that>
         <template>
-        I understand you are upset about that! Try to stay calm and think of a solution.
+        I understand you are upset about that! Try to stay calm and think of a solution. 
         </template>
     </category>
 
@@ -176,8 +176,6 @@
         </template>
 </category>
     
-
-
     <category>
         <pattern>* SAD</pattern>
         <template>

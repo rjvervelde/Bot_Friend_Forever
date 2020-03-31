@@ -8,6 +8,7 @@ def set_parameters():
     kernel.setPredicate("age", "undefined")
     kernel.setPredicate("age_category", "undefined")
     kernel.setPredicate("how_many_days", "it is always youre birthday")
+    
     return
 
 def birthday(born):
