@@ -247,7 +247,7 @@
         <that>* MORE ABOUT HOW YOU ARE FEELING</that>
         <template>
         <condition name="feeling">
-        <li value="">So, how are you feeling? "Good" or "not so good"?</li>
+        <li value="">So, how are you feeling today?</li>
         <li>Are you still feeling <get name="feeling"></get>?</li>
         </condition>
         </template>
@@ -1084,13 +1084,13 @@
         </template>
     </category>
         
-        <category>
+    <category>
         <pattern>BEGINNING QUESTIONS</pattern>
         <template>
         <condition name="age">
         <li value=""><srai>AGE</srai></li>
         <li><condition name="feeling">
-            <li value="">Hi <get name="name"></get>! How are you doing today? "Feeling good" or "not so good"?</li>
+            <li value="">Hi <get name="name"></get>! How are you doing today?</li>
             <li><srai>RANDOM SUGGESTIONS</srai> </li>
         </condition></li>
         </condition>
