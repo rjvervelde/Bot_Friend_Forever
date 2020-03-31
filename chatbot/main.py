@@ -3,7 +3,7 @@ from sentiment_fancy import sentiment_of_text
 from datetime import date, datetime
 
 def set_parameters():
-    kernel.setPredicate("status", "neutral")
+    kernel.setPredicate("feeling", "neutral")
     kernel.setPredicate("birthday", "everyday there is time for a party")
     kernel.setPredicate("age", "undefined")
     kernel.setPredicate("age_category", "undefined")
@@ -49,13 +49,13 @@ def calculate_until_birthday():
 
 def extract_information(user_message):
     # sentiment analysis
-    if kernel.getPredicate("status"):
+    if kernel.getPredicate("feeling"):
         sentiment = sentiment_of_text(user_message)
         if sentiment < 0:
             
-            kernel.setPredicate("status", "not so good")
+            kernel.setPredicate("feeling", "not so good")
         else:
-            kernel.setPredicate("status", "good")
+            kernel.setPredicate("feeling", "good")
     
     # calculate age
     for element in user_message:
@@ -82,6 +82,8 @@ while True:
     message = input("Enter your message >> ")
     
     if message == "quit":
+        naam = kernel.getPredicate("name")
+        print(f"Bye, {naam}, see you soon!")
         break #useful in notebook
     else:
         extract_information(message)
@@ -89,5 +91,3 @@ while True:
         
         print(bot_response)
 
-naam = kernel.getPredicate("name")
-print(naam)

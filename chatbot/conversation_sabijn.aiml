@@ -12,11 +12,11 @@
         <pattern>*</pattern>
         <that>* * YOU TODAY</that>
         <template>
-            <condition name = "status" value = "not so good">
+            <condition name = "feeling" value = "not so good">
                 That sucks, how are you feeling exactly? Are you "sad", "sick", "bored", "worried" or "angry"?
             </condition>
             
-            <condition name = "status" value = "good">
+            <condition name = "feeling" value = "good">
                 Good to hear you feeling good. Why are you feeling good?
             </condition>
         </template>
