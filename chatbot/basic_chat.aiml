@@ -1069,7 +1069,7 @@
         <pattern>RANDOM SUGGESTIONS</pattern>
         <template>
         <random>
-            <li><srai>I WOULD LIKE TO TALK ABOUT SOMETHING<srai></li>
+            <li><srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai></li>
             <li>By the way <get name="name"></get>, do you want to hear a good joke?</li>
             <li><condition name="feeling">
                <li value="good"><srai>RANDOM SUGGESTIONS</srai></li>
