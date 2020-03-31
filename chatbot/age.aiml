@@ -37,7 +37,7 @@
 
     <category>
         <pattern>POP</pattern>
-        <that>* DISNEY OR KIDS MUSIC</that>
+        <that>* POP MUSIC OR DISNEY</that>
         <template>
             Yes, pop is so cool!! Which song do you like better: Happy (by pharell williams) or Fireworks (by Katy Perry)?
         </template>
@@ -77,7 +77,7 @@
 
     <category>
         <pattern>DISNEY</pattern>
-        <that>* DISNEY OR KIDS MUSIC</that>
+        <that>* POP MUSIC OR DISNEY</that>
         <template>
           I love Disney!! Which Disney character is your favorite between Ariel, Rapunzel, Mickey Mouse, Vaiana or Elsa?
         </template>
@@ -135,7 +135,7 @@
 
     <category>
         <pattern>SPACE</pattern>
-        <that>THE WORLD IS FULL OF INTERESTING THINGS *</that>
+        <that>THE WORLD IS SO FULL OF INTERESTING THINGS *</that>
         <template>
         <random>
             <li> space is so cool! Do you want to know something about the moonlanding?</li>
@@ -207,7 +207,7 @@
 
     <category>
         <pattern>NATURE</pattern>
-        <that>THE WORLD IS FULL OF INTERESTING THINGS *</that>
+        <that>THE WORLD IS SO FULL OF INTERESTING THINGS *</that>
         <template>
         <random>
             <li> The world around us is so interesting! Do you want to know something about the dinosaurs?</li>
@@ -279,7 +279,7 @@
 
     <category>
         <pattern>HISTORY</pattern>
-        <that>THE WORLD IS FULL OF INTERESTING THINGS *</that>
+        <that>THE WORLD IS SO FULL OF INTERESTING THINGS *</that>
         <template>
         <random>
             <li> A lot has happened in the past... Do you want to know something about the ancient Egypt?</li>

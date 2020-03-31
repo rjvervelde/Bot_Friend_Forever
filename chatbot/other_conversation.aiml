@@ -4,7 +4,12 @@
     <category>
         <pattern>I WOULD LIKE TO TALK ABOUT SOMETHING</pattern>
         <template>
-            Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
+            <condition name="age_category">
+            <li value="undefined">Ah, before we talk, when were you born?</li>
+            <li value="0"><srai>KID CONVERSATION</srai></li>
+            <li value="1"><srai>ADULT CONVERSATION</srai></li>
+            </condition>
+            
         </template>
     </category>
 
@@ -38,7 +43,15 @@
     </category>
 
     <category>
+        <pattern>ADULT CONVERSATION</pattern>
+        <template>
+            Nice! Learning is fuel for the brain :) What are you interested in? (Choose: "Science", "Movies", "Music")
+        </template>
+    </category>
+
+    <category>
         <pattern>MUSIC</pattern>
+        <that>* LEARNING IS FUEL FOR THE BRAIN *</that>
         <template>
             I love music too. What is your favorite genre from Jazz, Classical Music, Pop or Rock?
         </template>
@@ -285,6 +298,7 @@
 
     <category>
         <pattern>SCIENCE</pattern>
+        <that>* LEARNING IS FUEL FOR THE BRAIN *</that>
         <template>
             Science makes the world, great choice!! What is your field of interest? (Choose: Computer Science, Physics, Biology, Psychology, Philosophy)
         </template>
@@ -324,7 +338,7 @@
     </category>
 
     <category>
-        <pattern>PHYCHOLOGY</pattern>
+        <pattern>PSYCHOLOGY</pattern>
         <template>
         <random>
             <li> Do you know your personality type? I am an extravert! https://www.16personalities.com</li>
@@ -350,6 +364,7 @@
 
     <category>
         <pattern>MOVIES</pattern>
+        <that>* LEARNING IS FUEL FOR THE BRAIN *</that>
         <template>
         <random>
             <li> Do you know: The Sound of Music?</li>
