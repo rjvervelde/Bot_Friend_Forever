@@ -91,8 +91,10 @@ def to_txt_file_name(name):
         # if information is already in textfile, don't change anything
         if name in file_object.read():
             return
-    # delete all information     (deze open//close() hieronder zou in principe de hele file moeten emptyen maar nu vervangt die alleen maar de naam,
-    # en blijft de birthday staan.. @ sabijn kan jij hier misschien nog even naar kijken? )   
+    # delete all information     (deze open//close() 
+    # hieronder zou in principe de hele file moeten emptyen
+    #  maar nu vervangt die alleen maar de naam,
+    # en blijft de birthday staan..)   
     open("data.txt", 'w').close()
     # Open the file in append & read mode ('a+')
     with open("data.txt", "a+") as file_object:
@@ -129,6 +131,7 @@ if len(data_age_name) > 0:
 # Press CTRL-C to break this loop
 while True:
     message = input("Enter your message >> ")
+
     if message == "quit":
         naam = kernel.getPredicate("name")
         bday = kernel.getPredicate("birthday")
@@ -141,4 +144,5 @@ while True:
         bot_response = kernel.respond(message)
         
         print(bot_response)
+        
 
