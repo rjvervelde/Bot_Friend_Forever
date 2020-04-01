@@ -7,7 +7,7 @@
         <template>
             <condition name="age">
             <li value="undefined">I didn't get your birthday right. Can you enter it again in the format DD-MM-YYYY?</li>
-            <li>Allright, so you are <get name="age"></get>? You are old, I am only a few days :)</li>
+            <li>Allright, so you are <get name="age"></get>? (You are old, I am only a few days :) ) If I am right, please type "correct" and we will start talking.</li>
             </condition>
         </template>
     </category>

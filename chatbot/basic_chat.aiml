@@ -247,7 +247,7 @@
         <that>* MORE ABOUT HOW YOU ARE FEELING</that>
         <template>
         <condition name="feeling">
-        <li value="">So, how are you feeling today?</li>
+        <li value="">So, how are you today?</li>
         <li>Are you still feeling <get name="feeling"></get>?</li>
         </condition>
         </template>
@@ -1105,8 +1105,8 @@
     </category> -->
 
     <category>
-        <pattern>*</pattern>
-        <that>* * A FEW DAYS</that>
+        <pattern>CORRECT</pattern>
+        <that>* * AND WE WILL START TALKING</that>
         <template>
         <condition name="name">
                 <li>Hi <get name="name"></get>! How are you today?</li>
