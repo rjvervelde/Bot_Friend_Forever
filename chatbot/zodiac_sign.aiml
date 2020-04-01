@@ -2,16 +2,16 @@
 <aiml version="2.0">
 
     <category>
-        <pattern>WHAT IS MY HOROSCOOP</pattern>
+        <pattern>WHAT IS MY HOROSCOPE</pattern>
         <template>
-            <srai>RANDOM HOROSCOOP</srai>
+            <srai>RANDOM HOROSCOPE</srai>
         </template>
     </category>
 
     <category>
         <pattern>MY ZODIAC SIGN IS *</pattern>
         <template>
-            <srai>RANDOM HOROSCOOP</srai>
+            <srai>RANDOM HOROSCOPE</srai>
         </template>
     </category>
 
