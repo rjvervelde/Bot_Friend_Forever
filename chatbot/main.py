@@ -83,21 +83,37 @@ kernel.respond("load aiml")
 
 set_parameters()
 
-def to_txt_file(information):
+def to_txt_file_name(name):
     # Open the file in append & read mode ('a+')
     with open("data.txt", "a+") as file_object:
         # Move read cursor to the start of file.
         file_object.seek(0)
         # if information is already in textfile, don't change anything
-        if information in file_object.read():
+        if name in file_object.read():
             return
-        # If file is not empty then append '\n'
-        data = file_object.read(100)
-        if len(data) > 0:
-            file_object.write("\n")
-        # Append text at the end of file
-        file_object.write(information)
+    # delete all information     (deze open//close() hieronder zou in principe de hele file moeten emptyen maar nu vervangt die alleen maar de naam,
+    # en blijft de birthday staan.. @ sabijn kan jij hier misschien nog even naar kijken? )   
+    open("data.txt", 'w').close()
+    # Open the file in append & read mode ('a+')
+    with open("data.txt", "a+") as file_object:
+        # Move read cursor to the start of file.
+        file_object.seek(0)
+        # Append text in file
+        file_object.write(name)
         file_object.write("\n")
+
+
+def to_txt_file_birthday(birthday):
+    with open("data.txt", "a+") as file_object:
+        # Move read cursor to the start of file.
+        file_object.seek(0)
+        if birthday in file_object.read():
+            return
+        else:
+            # Append text at the end of file
+            file_object.write(birthday)
+            file_object.write("\n")
+
 
 # pandas can't  read an empty csv file
 if os.stat("data.txt").st_size != 0:
@@ -105,18 +121,19 @@ if os.stat("data.txt").st_size != 0:
 else:
     data_age_name = []
 
+if len(data_age_name) > 0:
+    kernel.setPredicate("name", data_age_name[0][0])
+    if len(data_age_name) > 1:
+        kernel.setPredicate("birthday", data_age_name[0][1])
+
 # Press CTRL-C to break this loop
 while True:
-    if len(data_age_name) > 0:
-        kernel.setPredicate("name", data_age_name[0][0])
-        if len(data_age_name) > 1:
-            kernel.setPredicate("birthday", data_age_name[0][1])
     message = input("Enter your message >> ")
     if message == "quit":
         naam = kernel.getPredicate("name")
         bday = kernel.getPredicate("birthday")
-        to_txt_file(naam)
-        to_txt_file(bday)
+        to_txt_file_name(naam)
+        to_txt_file_birthday(bday)
         print(f"Bye, {naam}, see you soon!")
         break 
     else:
