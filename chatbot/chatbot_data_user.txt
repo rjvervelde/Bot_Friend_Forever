@@ -1,3 +1,0 @@
-The age of the user is 22.
-
-The name of the user is Ellen.

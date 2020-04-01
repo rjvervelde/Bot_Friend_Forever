@@ -1,4 +1,5 @@
 import aiml
+import pandas as pd
 from sentiment_fancy import sentiment_of_text
 from datetime import date, datetime
 
@@ -81,8 +82,12 @@ kernel.respond("load aiml")
 
 set_parameters()
 
+data_age_name = pd.read_csv(data.txt, header = None)
+print(data_age_name)
+
 # Press CTRL-C to break this loop
 while True:
+    
     message = input("Enter your message >> ")
     
     if message == "quit":
