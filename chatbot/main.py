@@ -88,7 +88,7 @@ while True:
     if message == "quit":
         naam = kernel.getPredicate("name")
         print(f"Bye, {naam}, see you soon!")
-        break #useful in notebook
+        break 
     else:
         extract_information(message)
         bot_response = kernel.respond(message)
