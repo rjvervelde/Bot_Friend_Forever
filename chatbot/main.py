@@ -91,6 +91,7 @@ def to_txt_file(information):
         # if information is already in textfile, don't change anything
         if information in file_object.read():
             return
+
         # If file is not empty then append '\n'
         data = file_object.read(100)
         if len(data) > 0:
@@ -111,7 +112,9 @@ while True:
         kernel.setPredicate("name", data_age_name[0][0])
         if len(data_age_name) > 1:
             kernel.setPredicate("birthday", data_age_name[0][1])
+
     message = input("Enter your message >> ")
+
     if message == "quit":
         naam = kernel.getPredicate("name")
         bday = kernel.getPredicate("birthday")
@@ -124,4 +127,5 @@ while True:
         bot_response = kernel.respond(message)
         
         print(bot_response)
+        
 
