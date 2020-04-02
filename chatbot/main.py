@@ -3,6 +3,7 @@ import pandas as pd
 import os
 from sentiment_fancy import sentiment_of_text
 from datetime import date, datetime
+import re
 
 def set_parameters():
     kernel.setPredicate("feeling", "neutral")
@@ -47,9 +48,10 @@ def calculate_until_birthday():
 
     today = datetime.now()
 
-    delta1 = datetime(today.year, int(birth_month), int(birth_day))
-    delta2 = datetime(today.year+1, int(birth_month), int(birth_day))
-    days = (max(delta1, delta2) - today).days
+    if datetime(today.year, int(birth_month), int(birth_day)) < today:
+        days = (datetime(today.year+1, int(birth_month), int(birth_day)) - today).days
+    else:
+        days = (datetime(today.year, int(birth_month), int(birth_day)) - today).days
 
     return f"{days}"
 
@@ -71,7 +73,8 @@ def extract_information(user_message):
             break
     
     # how many days until you're birthday
-    if user_message.lower()[-8:] == "birthday":
+    x = re.search(".*birthday.*", user_message.lower())
+    if  x != None:
         kernel.setPredicate("how_many_days", calculate_until_birthday())
 
     return
