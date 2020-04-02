@@ -87,7 +87,7 @@
         Hm, let's think of somthing to do then!
         <random>
         <li><srai>ACTIVITIES</srai></li>
-        <li>Let's just chat a bit. Do you prefer to talk about "movies" or "music"?</li>
+        <li>Shall we just talk a bit about something?</li>
         </random>  
         </template>
     </category>
@@ -108,7 +108,7 @@
             <li>Go through a newspaper and draw funny hair, moustaches and other things on all the photos.</li>
             <li>Take some time making your own list on a nice piece of paper of things you like to do or want to do. 
                 That way you have something to do now AND later. :)</li>
-            <li>It can be be interesting to write down a story about the last dream you remember you had.</li>
+            <li>Maybe it will be fun to write a story about the last dream you remember you had.</li>
             </random>
         </template>
     </category>
@@ -220,9 +220,9 @@
         <template> 
         <random>
         <li>What do robots eat as snacks? Micro-chips!</li>
-        <li>Why did the droid cross the road? Because it was programmed by a chicken!</li>
-        <li>What android team won the Olympic watersports? The rowbots!</li>
-        <li>Why was the robot tired when it got home? It had a 'hard drive'!</li>
+        <li>Why did the droid cross the road? Because it was programmed by a chicken! </li>
+        <li>What android team won the Olympic watersports? The rowbots! </li>
+        <li>Why was the robot tired when it got home? It had a 'hard drive'! </li>
         </random>
         </template>
     </category>
@@ -454,6 +454,14 @@
         </template>
     </category>
     # verwijst naar Other_Conversations
+    
+     <category>
+        <pattern>YES</pattern>
+        <that>* TALK A BIT ABOUT SOMETHING</that>
+        <template>
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai> 
+        </template>
+    </category>
     
      <category>
         <pattern>CHAT A BIT</pattern>
