@@ -345,7 +345,7 @@
         <li>I hope someone told you today how amazing you are. If not: You are amazing! :D</li>
         <li>you make me want to be the best version of myself. (Let's hope I will be updated soon. :P)</li>
         <li>simply knowing you has made me a better bot.</li>
-        <li>you’re the most perfect ‘you’ there is.</li>
+        <li>you’re the most perfect ‘you’ there is, <get name="name"></get>.</li>
         </random>
         </template>
     </category> 
@@ -733,6 +733,13 @@
          Oh je spreekt Nederlands?
       </template>
    </category>  
+   
+   <category>
+      <pattern>HALLO</pattern>
+      <template>
+         <srai>HOI</srai>
+      </template>
+   </category> 
 
   <category>
       <pattern>*</pattern>
@@ -848,7 +855,7 @@
       <category>
       <pattern>WHAT CAN YOU DO</pattern>
       <template>
-      There are so many options! I can find you a game, we can talk about how you are feeling or just chat a bit, maybe you want to learn something, or shall I tell you a joke, or tell you your horoscope? I only need one word to know what you want. :D
+      There are so many options! I can find you a game (or play "thought game" together), we can talk about how you are feeling or just chat a bit, maybe you want to learn something, or shall I tell you a joke, or tell you your horoscope? I only need one word to know what you want. :D
       </template>
    </category>
    
@@ -937,10 +944,10 @@
             <li>By the way <get name="name"></get>, do you want to hear a good joke?</li>
             <li><condition name="feeling">
                <li value="good"><srai>RANDOM SUGGESTIONS</srai></li>
-               <li>Do you want to talk more about how you are feeling?</li>
+               <li>So... Do you want to talk more about how you are feeling?</li>
             </condition></li>
             <li>So <get name="name"></get>, do you want to hear some ideas for activities?</li>
-            <li>Do you want to know your horoscope for today?</li>
+            <li>By the way, do you want to know your horoscope for today?</li>
             <li>Well, maybe you want me to find you a fun game to play? Or a puzzle? (Then type "game" or "puzzle")</li>
             <li>Now, maybe I can teach you some cool things. Do you want to learn something?</li>
             <li>So... I just wanted to tell you, <srai>compliment</srai></li>
