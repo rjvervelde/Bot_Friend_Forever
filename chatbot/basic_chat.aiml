@@ -447,6 +447,29 @@
     </category>
     # verwijst naar Other_Conversations
     
+     <category>
+        <pattern>CHAT</pattern>
+        <template>
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai> 
+        </template>
+    </category>
+    # verwijst naar Other_Conversations
+    
+     <category>
+        <pattern>CHAT A BIT</pattern>
+        <template>
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai> 
+        </template>
+    </category>
+    # verwijst naar Other_Conversations
+    
+     <category>
+        <pattern>* CHAT</pattern>
+        <template>
+        <srai>I WOULD LIKE TO TALK ABOUT SOMETHING</srai> 
+        </template>
+    </category>
+    # verwijst naar Other_Conversations
    
 #thought game:
 
@@ -456,188 +479,6 @@
            Lets play a game. I have someting in my mind, you try to guess it. You want to play that game?
         </template>
     </category>
-
-<category>
-        <pattern>YES</pattern>
-        <that>LETS PLAY A GAME *</that>
-        <template>
-            <think>
-            <random>
-            <li><set name="thoughtgame">grapefruit</set></li>
-            <li><set name="thoughtgame">cherry</set></li>
-            <li><set name="thoughtgame">pear</set></li>
-            </random>
-            </think>
-            Category: fruit. 8 guesses left. Type "stop game" if you want to stop playing. Make your first guess
-        </template>
-    </category>
-
-        <category>
-            <pattern>CHECK FOR ANSWER *</pattern>
-            <template>
-                <think><set name="guess"><star/></set></think>
-                <condition name="thoughtgame">
-                        <li value="grapefruit">
-                        <condition name="guess">
-                        <li value="grapefruit">Correct! I was thinking about <get name="thoughtgame"></get>
-                        <think><set name="WrongOrRight">right</set></think></li>
-                        <li><think><set name="WrongOrRight">wrong</set></think></li>
-                        </condition>
-                        </li>
-                        <li value="cherry">
-                        <condition name="guess">
-                        <li value="cherry">Correct! I was thinking about <get name="thoughtgame"></get>
-                        <think><set name="WrongOrRight">right</set></think></li>
-                        <li><think><set name="WrongOrRight">wrong</set></think></li>
-                        </condition>
-                        </li>
-                        <li value="pear">
-                        <condition name="guess">
-                        <li value="mango">Correct! I was thinking about <get name="thoughtgame"></get>
-                        <think><set name="WrongOrRight">right</set></think></li>
-                        <li><think><set name="WrongOrRight">wrong</set></think></li>
-                        </condition>
-                        </li>
-                        <li value="">Sorry, something went wrong</li>
-                </condition>
-            </template>
-            </category>
-
-    <category>
-        <pattern>*</pattern>
-        <that>* * YOUR FIRST GUESS</that>
-        <template>
-          <srai>CHECK FOR ANSWER <star/></srai>
-          <condition name="WrongOrRight">
-                <li value="wrong">It is not <star/>. Make your second guess</li>
-                </condition>
-        </template>
-    </category>
-    
-    <category>
-        <pattern>*</pattern>
-        <that>* * MAKE YOUR SECOND GUESS</that>
-        <template>
-        <srai>CHECK FOR ANSWER <star/></srai>
-          <condition name="WrongOrRight">
-                <li value="wrong">
-                    It's not <star/>. <srai>THOUGHTGAME HINT 1</srai> You can make your third guess.</li>
-                </condition>
-        </template>
-    </category>
-    
-    <category>
-        <pattern>*</pattern>
-        <that>* * MAKE YOUR THIRD GUESS</that>
-        <template>
-        <srai>CHECK FOR ANSWER <star/></srai>
-          <condition name="WrongOrRight">
-                <li value="wrong">
-                    It's not <star/>. You can make your fourth guess.</li>
-                </condition>
-        </template>
-    </category>
-    
-    <category>
-        <pattern>*</pattern>
-     <that>* * MAKE YOUR FOURTH GUESS</that>
-        <template>
-        <srai>CHECK FOR ANSWER <star/></srai>
-          <condition name="WrongOrRight">
-                <li value="wrong">
-                 It's not <star/>. <srai>THOUGHTGAME HINT 2</srai> You can make your fifth guess.</li>
-                </condition>
-        </template>
-    </category>
-
-   <category>
-        <pattern>*</pattern>
-        <that>* * MAKE YOUR FIFTH GUESS</that>
-        <template>
-        <srai>CHECK FOR ANSWER <star/></srai>
-            <condition name="WrongOrRight">
-                <li value="wrong">
-                 It's not <star/>. <srai>THOUGHTGAME HINT 3</srai> You can make your sixth guess.</li>
-            </condition>
-        </template>
-    </category>
-
-    <category>
-        <pattern>*</pattern>
-     <that>* * MAKE YOUR SIXTH GUESS</that>
-        <template>
-        <srai>CHECK FOR ANSWER <star/></srai>
-          <condition name="WrongOrRight">
-                <li value="wrong">
-                It's not <star/>. <srai>THOUGHTGAME HINT 4</srai> You can make your last guess.</li>
-                </condition>
-        </template>
-    </category>
-    
-    <category>
-        <pattern>*</pattern>
-     <that>* * MAKE YOUR LAST GUESS</that>
-        <template>
-         <srai>CHECK FOR ANSWER <star/></srai>
-          <condition name="WrongOrRight">
-                <li value="wrong">
-                Ahhh, you did not guess it in time. I was thinking about <get name="thoughtgame"></get>.</li>
-                </condition>
-        </template>
-    </category>
-    
-
-#thoughtgame hints    
-    <category>
-        <pattern>THOUGHTGAME HINT 1</pattern>
-        <template>
-            <condition name="thoughtgame">
-                <li value="grapefruit">Hint: It's round.</li>
-                <li value="cherry">Hint: It's round.</li>
-                <li value="pear">Hint: it's green.</li>
-            </condition>
-        </template>
-    </category>
-    
-      <category>
-        <pattern>THOUGHTGAME HINT 2</pattern>
-        <template>
-        <condition name="thoughtgame">
-                <li value="grapefruit">Hint: It's yellow or orange on the outside.</li>
-                <li value="cherry">Hint: It has one pit.</li>
-                <li value="pear">Hint: It is not round.</li>
-                </condition>
-        </template>
-    </category>
-    
-      <category>
-        <pattern>THOUGHTGAME HINT 3</pattern>
-        <template>
-        <condition name="thoughtgame">
-                <li value="grapefruit">Hint: It's red or yellow on the inside.</li>
-                <li value="cherry">Hint: It is small.</li>
-                <li value="pear">Hint: It Is about the same size as an apple.</li>
-        </condition>
-        </template>
-    </category>
-    
-      <category>
-        <pattern>THOUGHTGAME HINT 4</pattern>
-        <template>
-        <condition name="thoughtgame">
-                <li value="grapefruit">Hint: It's a citrus fruit.</li>
-                <li value="cherry">Hint: It starts with a C.</li>
-                <li value="pear">Hint: It starts with a P.</li>
-                </condition>
-        </template>
-    </category>
-    
-<category>
-        <pattern>STOP GAME</pattern>
-        <template>
-        You stopped the game. The answer was <get name="thoughtgame"></get>.
-        </template>
-    </category>    
 
 
 <category>
@@ -1007,7 +848,14 @@
       <category>
       <pattern>WHAT CAN YOU DO</pattern>
       <template>
-      There are so many options! I can find you a game, we can talk about how you are feeling or chat some about music or movies, maybe you want to learn something, or shall I just tell you a joke? I only need one word to know what you want. :D
+      There are so many options! I can find you a game, we can talk about how you are feeling or just chat a bit, maybe you want to learn something, or shall I tell you a joke, or tell you your horoscope? I only need one word to know what you want. :D
+      </template>
+   </category>
+   
+   <category>
+      <pattern>WHAT ELSE CAN YOU DO</pattern>
+      <template>
+      <srai>WHAT CAN YOU DO</srai>
       </template>
    </category>
    
@@ -1017,6 +865,13 @@
       <srai>WHAT CAN YOU DO</srai>
       </template>
    </category>
+   
+  <category>
+      <pattern>WHAT ELSE CAN WE DO</pattern>
+      <template>
+      <srai>WHAT CAN YOU DO</srai>
+      </template>
+   </category>  
 
 <category>
       <pattern>WHAT NOW</pattern>
@@ -1053,6 +908,7 @@
       <li>So... I just wanted to tell you, <srai>COMPLIMENT</srai></li>
       <li>Ok then. If you want to know what else I can do, please just ask me.</li>
       <li>Ok then. Did you know: you can try to greet me in a different language</li>
+      <li>Ok then. Did you know: I can calculate how many days are left till your birthday</li>
       <li>When the road looks rough ahead, and you're miles and miles from your nice warm bed ...</li>
       </random>
       </template>
