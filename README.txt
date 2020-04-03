@@ -46,7 +46,8 @@ terminal should make you able to speak to the chatbot. Enjoy!
 
 
 PROBLEMS
-If a problem arises, make sure that you have all the given files on your computer. If this doesn't solve the problem, e-mail one of the creators.
+If a problem arises, make sure that you have all the given files on your computer. 
+If this doesn't solve the problem, e-mail one of the creators.
 
 These are:
     - age.aiml
