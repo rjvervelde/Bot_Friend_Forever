@@ -5,7 +5,7 @@
         <pattern>I WOULD LIKE TO TALK ABOUT SOMETHING</pattern>
         <template>
             <condition name="age_category">
-            <li value="undefined">Ah, before we talk, when were you born?</li>
+            <li value="undefined">Ah, before we talk, when were you born? (DD-MM-YYYY)</li>
             <li value="0"><srai>KID CONVERSATION</srai></li>
             <li value="1"><srai>ADULT CONVERSATION</srai></li>
             </condition>
@@ -217,13 +217,6 @@
         </template>
     </category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>* WHAT IS YOUR FAVORITE BAND</that>
-        <template>
-            Hmm I don't know that one. I should listen to it!
-        </template>
-    </category>
 
     <category>
         <pattern>PINK FLOYD</pattern>
@@ -287,10 +280,18 @@
 
     
     <category>
-        <pattern>AC/DC</pattern>
+        <pattern>AC DC</pattern>
         <that>* WHAT IS YOUR FAVORITE BAND</that>
         <template>
             These golden oldies are still going just as hard! Watch this live performance: https://bit.ly/2Jfvi3a
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>ROCK GIVES ME SO MANY FEELINGS *</that>
+        <template>
+            Hmm I don't know that one. I should listen to it! 
         </template>
     </category>
 
