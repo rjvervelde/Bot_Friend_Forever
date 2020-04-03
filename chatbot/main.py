@@ -1,3 +1,11 @@
+"""
+This file does the following things:
+1) it sets up and shuts down the kernel used to talk to the chatbot
+2) it sets parameters used in the AIML
+3) it calculates the birthday of the user and the amount of days untill their birthday
+4) it saves the name and the birthday to a txt file
+"""
+
 import aiml
 import pandas as pd
 import os
@@ -15,13 +23,22 @@ def set_parameters():
     return
 
 def birthday(born):
+    """
+    This function calculates the age of the user based on their birthday. 
+    For the current time it uses the packages datetime. 
+    When there is a mistake the parameter is set to undefined
+    """
     try:
+        # get current day
         today = date.today()
         d = today.strftime("%d/%m/%Y")
         current_day, current_month, current_year = d.split("/")
+
+        # get birthday
         birth_day, birth_month, birth_year = born.split()[-1].split('-')
         kernel.setPredicate("birthday", f"{born.split()[-1]}")
         
+        # calculates the age of the user
         if int(birth_month) < int(current_month):
             diff = int(current_year) - int(birth_year)
         elif birth_month == current_month:
@@ -32,6 +49,7 @@ def birthday(born):
         else:
             diff = int(current_year) - int(birth_year) - 1
 
+        # set age category
         if diff < 16:
             classs = "0"
         else:
@@ -43,6 +61,10 @@ def birthday(born):
         return f"undefined", "undefined"
 
 def calculate_until_birthday():
+    """
+    This function calculates the amount of days untill the birthday of the user.
+    For the current day it uses the packages datetime
+    """
     birthday = kernel.getPredicate("birthday")
     birth_day, birth_month, birth_year = birthday.split('-')
 
@@ -56,6 +78,11 @@ def calculate_until_birthday():
     return f"{days}"
 
 def extract_information(user_message):
+    """
+    This function handles the input of the user. 
+    It recognizes when it is needed to perform sentiment analysis,
+    to calculate the age or the amount of days until the birthday
+    """
     # sentiment analysis
     if kernel.getPredicate("feeling"):
         sentiment = sentiment_of_text(user_message)
@@ -87,6 +114,10 @@ kernel.respond("load aiml")
 set_parameters()
 
 def to_txt_file_name(name):
+    """
+    This function saves the name of the user in the txt file 
+    """
+
     # Open the file in append & read mode ('a+')
     with open("data.txt", "a+") as file_object:
         # Move read cursor to the start of file.
@@ -109,6 +140,9 @@ def to_txt_file_name(name):
 
 
 def to_txt_file_birthday(birthday):
+    """
+    This function saves the birthday of the user in the txt file
+    """
     with open("data.txt", "a+") as file_object:
         # Move read cursor to the start of file.
         file_object.seek(0)
@@ -131,7 +165,10 @@ if len(data_age_name) > 0:
     if len(data_age_name) > 1:
         kernel.setPredicate("birthday", data_age_name[0][1])
 
-# Press CTRL-C to break this loop
+"""
+Type "quit" to leave this loop. When this doesn't work you can use Ctrl+C 
+(But in that case the bot will not save your data and say goodbye)
+"""
 while True:
     message = input("Enter your message >> ")
 

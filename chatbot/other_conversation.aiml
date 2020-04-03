@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
+<!-- This file contains all the code for talking with an adult 
+about movies, sciences and music. -->
+
     <category>
         <pattern>I WOULD LIKE TO TALK ABOUT SOMETHING</pattern>
         <template>

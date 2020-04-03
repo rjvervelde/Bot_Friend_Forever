@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
+<!-- This file contains the code for playing the thought game about fruit.
+This file will be called when the user answers 'yes' to the random question 
+about playing a thoughtgame-->
+
     <category>
         <pattern>YES</pattern>
         <that>LETS PLAY A GAME *</that>
