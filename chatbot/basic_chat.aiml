@@ -965,7 +965,7 @@
 
 <category>
         <pattern>*</pattern>
-        <that>* * * </that>
+        <that>* * </that>
         <template>
         <srai>RANDOM SUGGESTIONS</srai>
         </template>
