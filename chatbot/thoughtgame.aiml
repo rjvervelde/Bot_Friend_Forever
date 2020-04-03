@@ -37,7 +37,7 @@
                         </li>
                         <li value="pear">
                         <condition name="guess">
-                        <li value="mango">Correct! I was thinking about <get name="thoughtgame"></get>
+                        <li value="pear">Correct! I was thinking about <get name="thoughtgame"></get>
                         <think><set name="WrongOrRight">right</set></think></li>
                         <li><think><set name="WrongOrRight">wrong</set></think></li>
                         </condition>
